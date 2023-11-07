@@ -35,6 +35,6 @@ This project has a "sister" project, which is a code repository of R code and fu
 | Name                     | Purpose                                                         | Link                                                |
 |--------------------------|-----------------------------------------------------------------|-----------------------------------------------------|
 | msdn-collab              | Health inequalities code sharing                                | <https://github.com/nhs-r-community/mdsn-collab>    |
-| Health Inequalities Notebook | Health inequalities information and analytical approach sharing | <https://github.com/nhs-r-community/HIQ_QuartoBook> |
+| Health Inequalities Notebook | Health inequalities information and analytical approach sharing | <https://github.com/nhs-r-community/health-inequalites-notebook/> |
 
 END
