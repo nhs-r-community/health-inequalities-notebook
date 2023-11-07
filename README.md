@@ -1,6 +1,6 @@
 # Health Inequalities Notebook
 
-This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.  
+This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
 
 ## Aim
 
@@ -32,9 +32,9 @@ The project is organic, and will be taken in the direction that contributors (wi
 
 This project has a "sister" project, which is a code repository of R code and functions of interest to analysts actively working on data. It is also at an early stage, and there is an open call for contributors. Please get involved if you can. You can find links to both sister projects here:
 
-| Name                     | Purpose                                                         | Link                                                |
-|--------------------------|-----------------------------------------------------------------|-----------------------------------------------------|
-| msdn-collab              | Health inequalities code sharing                                | <https://github.com/nhs-r-community/mdsn-collab>    |
-| Health Inequalities Notebook | Health inequalities information and analytical approach sharing | <https://github.com/nhs-r-community/health-inequalites-notebook/> |
+| Name                         | Purpose                                                         | Link                                                               |
+|-----------------|-------------------------------|-------------------------|
+| msdn-collab                  | Health inequalities code sharing                                | <https://github.com/nhs-r-community/mdsn-collab>                   |
+| Health Inequalities Notebook | Health inequalities information and analytical approach sharing | <https://github.com/nhs-r-community/health-inequalities-notebook/> |
 
 END
