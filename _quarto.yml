@@ -7,10 +7,10 @@ book:
   date: "last-modified"
   chapters:
     - index.qmd
-    - intro.qmd
-    - rural.qmd
-    - imd.qmd
-    - summary.qmd
+    - content/intro.qmd
+    - content/rural.qmd
+    - content/imd.qmd
+    - content/summary.qmd
     - references.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
