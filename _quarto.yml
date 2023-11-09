@@ -13,7 +13,7 @@ book:
     - summary.qmd
     - references.qmd
     
-  repo-url: https://github.com/nhs-r-community/
+  repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
   repo-actions: [edit, issue]
     
