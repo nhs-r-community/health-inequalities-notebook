@@ -1,9 +1,17 @@
-# Preface {.unnumbered}
+# Welcome {.unnumbered}
 
-This is a Quarto book.
+This book is an open-source collaborative project being run by NHS and Social Care staff mostly from the UK Midlands region.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+It is supported and enabled by:
 
-```{r}
-1 + 1
-```
+-   [The NHS-R Community](https://nhsrcommunity.com/)
+
+-   [The Midlands Decision Support Network](https://www.midlandsdecisionsupport.nhs.uk/)
+
+-   [The Strategy Unit](https://www.strategyunitwm.nhs.uk/)
+
+-   [The Midlands and Lancashire Commissioning Support Unit](https://www.midlandsandlancashirecsu.nhs.uk/)
+
+It is written using the [Quarto](https://quarto.org/) technical publishing system, currently v1.3.450.
+
+If you would like to contribute or otherwise get involved in the project, please raise an issue on [GitHub](https://github.com/nhs-r-community/health-inequalities-notebook/issues), or make contact in the NHS-R Slack group.

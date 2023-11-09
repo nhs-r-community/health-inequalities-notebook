@@ -1,0 +1,3 @@
+# Introduction (from README)
+
+{{< include ../README.md >}}

@@ -2,18 +2,18 @@ project:
   type: book
 
 book:
-  title: "Health Inequalties Book"
-  author: "MSDN Collaboration Group Alastair Watson"
+  title: "Health Inequalities Book"
+  author: "MSDN Collaboration Group"
   date: "last-modified"
   chapters:
     - index.qmd
-    - intro.qmd
-    - rural.qmd
-    - imd.qmd
-    - summary.qmd
+    - content/intro.qmd
+    - content/rural.qmd
+    - content/imd.qmd
+    - content/summary.qmd
     - references.qmd
     
-  repo-url: https://github.com/nhs-r-community/
+  repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
   repo-actions: [edit, issue]
     
