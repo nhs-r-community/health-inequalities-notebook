@@ -1,0 +1,10 @@
+---
+title: "Mapping"
+---
+
+# Centroid mapping
+
+Sometimes you have a set of addresses but no way of mapping them. 
+The Office for National Statistics’ [Open Geography Portal](https://www.arcgis.com/home/item.html?id=0c32f51c86554abab67036f07d66d6f6) provides the centroids for all UK postcodes.
+
+Using R to get centroid information: https://www.trafforddatalab.io/recipes/gis/postcodes.html#
