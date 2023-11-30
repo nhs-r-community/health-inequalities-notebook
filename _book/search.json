@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Health Inequalities Book",
+    "section": "",
+    "text": "Welcome\nThis book is an open-source collaborative project being run by NHS and Social Care staff mostly from the UK Midlands region.\nIt is supported and enabled by:\n\nThe NHS-R Community\nThe Midlands Decision Support Network\nThe Strategy Unit\nThe Midlands and Lancashire Commissioning Support Unit\n\nIt is written using the Quarto technical publishing system, currently v1.3.450.\nIf you would like to contribute or otherwise get involved in the project, please raise an issue on GitHub, or make contact in the NHS-R Slack group."
+  },
+  {
+    "objectID": "content/intro.html#aim",
+    "href": "content/intro.html#aim",
+    "title": "1  Introduction (from README)",
+    "section": "1.1 Aim",
+    "text": "1.1 Aim\nThe aim of the project is to collect together information that is helpful and relevant to analysts doing work in this space. By doing this, the project will:\n\nBecome a “Body of Knowledge”, and a quick reference for analysts.\nShare ideas and approaches which analysts can use in their own work, lowering the barrier to entry into this work, and encouraging broader and deeper analytical participation for the benefit of patients.\nShare public examples of previous work, to support conversations with stakeholders during the specification stage of a health inequalities project.\nFoster open-source collaboration in an area of public benefit, in line with reccommendations from the Goldacre Review, and the NHS Digital Sevice Manual."
+  },
+  {
+    "objectID": "content/intro.html#who-is-the-audience",
+    "href": "content/intro.html#who-is-the-audience",
+    "title": "1  Introduction (from README)",
+    "section": "1.2 Who is the audience?",
+    "text": "1.2 Who is the audience?\nThe scope is very large, and analysts working in this space come from different types of organisation. For example:\n\nProvider trusts. Analysts with good access to patient-level data who can use their analyses to provide practical descision-support to people directly running services that patients use.\nICBs. Analysts with less access to patient-level data, but with access to information from multiple organisations in a region, and with more context about regional populations, links to public health orgs, and local government.\nNHS “centre”. Analysts from NHS Regions or NHS England who work with government on broad health inequalities intervention planning (eg. those working on the Core20PLUS5 programme).\n\nThe project is organic, and will be taken in the direction that contributors (with some steering from maintainers) choose. For example, if the majority of contributors are from provider trusts, it can be expected that the depth of information relevant to ICBs might be less deep.\nThis is a call to action for contributors to involve themselves in the project! Please get involved if you work in this space, can see a gap, or want to steer the direction of this project."
+  },
+  {
+    "objectID": "content/intro.html#related-projects",
+    "href": "content/intro.html#related-projects",
+    "title": "1  Introduction (from README)",
+    "section": "1.3 Related projects",
+    "text": "1.3 Related projects\nThis project has a “sister” project, which is a code repository of R code and functions of interest to analysts actively working on data. It is also at an early stage, and there is an open call for contributors. Please get involved if you can. You can find links to both sister projects here:\n\n\n\nName\nPurpose\nLink\n\n\n\n\nmsdn-collab\nHealth inequalities code sharing\nhttps://github.com/nhs-r-community/mdsn-collab\n\n\nHealth Inequalities Notebook\nHealth inequalities information and analytical approach sharing\nhttps://github.com/nhs-r-community/health-inequalities-notebook/\n\n\n\nEND"
+  },
+  {
+    "objectID": "content/imd.html",
+    "href": "content/imd.html",
+    "title": "3  Index of Multiple Deprivation (IMD)",
+    "section": "",
+    "text": "4 Index of Multiple Deprivation\nThe latest available IMD data for England is from 2019.\nIMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.\nWikipedia link English IMD 2015 - Guidance\nTo get IMD scores or deciles for a local data a join will be needed to the postcode table (like a directory of postcodes) found:\nhttps://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files\nand then to the IMD data:\nhttps://www.gov.uk/government/statistics/english-indices-of-deprivation-2019\nSelect File 7 for the dataset.\nOther data is available from this dataset including IDAOPI which relates to only older people.\nNote that the column headers change, in 2015 it was LADistrictCode2013 and in 2019 it is LADistrictCode2019. Also LADistrictName2013 has become LADistrictName2019.\nTo get the IMD score the LSOA (Lower Super Output Area) code is required which is taken from the full postcode.\nThis code will not run and is dependent on the naming conventions of the SQL server. The column names of LSOA11 and LSOAcode2011 will have come from the data sources. The column PostCode_space has been added to the original data.\nSELECT imd.*\nFROM DIM_AI.PatientData AS p\nLEFT JOIN DIM_AI.PostCodes AS pc ON p.PostCode = pc.PostCode_space\nLEFT JOIN DIM_AI.IMD AS i ON pc.PC.LSOA11 = i.LSOAcode2011\nTo be able to join to the data scores will need to be put into quintiles (group of 5) rather than deciles (group of 10).\nIn areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. Packages like {NHSRpopulations} have functions to do this and more information in the vignette.\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf\nhttps://fingertips.phe.org.uk/search/imd\nhttp://dclgapps.communities.gov.uk/imd/idmap.html\nTechnical report for 2019: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf\nFrom a journal check to see how IMD is referenced in published papers, this was from a 2016 BMJ article that cites the Index in the references as:\n(Taken from https://bmjopen.bmj.com/content/bmjopen/6/11/e012750.full.pdf)\nAnother paper from 2016 cites as:\n(taken from https://www.mdpi.com/1660-4601/13/8/750)\nLooking at the Government page that lists the full text the library assistant said: “I would reference it from the Ministry of Housing, Communities and Local Government which would be more up to date for 2019 and with online references you should always put the date you accessed it. So I would suggest amending to the following:”\nMinistry of Housing, Communities and Local Government. English Indices of Deprivation 2015. 2015. https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015 (Accessed 4 June 2019)"
+  },
+  {
+    "objectID": "content/imd.html#local-imd-creation-in-sql",
+    "href": "content/imd.html#local-imd-creation-in-sql",
+    "title": "3  Index of Multiple Deprivation (IMD)",
+    "section": "8.1 Local IMD creation in SQL",
+    "text": "8.1 Local IMD creation in SQL\nTo apply a rank use the windows partition function ROW_NUMBER() OVER(ORDER BY IMDRank) to create a new ranking score and NTILE(10) OVER (ORDER BY IMDRank) to create new deciles."
+  },
+  {
+    "objectID": "content/imd.html#local-imd-creation-in-r",
+    "href": "content/imd.html#local-imd-creation-in-r",
+    "title": "3  Index of Multiple Deprivation (IMD)",
+    "section": "8.2 Local IMD creation in R",
+    "text": "8.2 Local IMD creation in R\n\nlibrary(tidyverse)\nlibrary(PostcodesioR)\n\n# Generate random example postcodes\npostcodes &lt;- purrr::map_chr(\n  1:10,\n  .f = ~PostcodesioR::random_postcode() |&gt; \n    purrr::pluck(1) \n) |&gt; \n  as.tibble()\n\n\n# [TODO] find way to join to postcode table for LSOA code\n\npostcodes |&gt; \n  inner_join(postcodeData |&gt; \n               select(LSOA11) |&gt; \n               group_by(LSOA11) |&gt; \n               slice(1), \n             join_by = c(\"LSOAcode2011\" = \"LSOA11\")) |&gt; \n  mutate(Notts_rank = row_number(IMDRank),\n         Notts_decile = ntile(IMDRank, 10)) \nlocalRanking |&gt; \n  select(LSOAcode2011:IMDDecile) |&gt; \n  head(5) |&gt; \n  knitr::kable(format = \"html\")"
+  },
+  {
+    "objectID": "content/summary.html",
+    "href": "content/summary.html",
+    "title": "4  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  }
+]
