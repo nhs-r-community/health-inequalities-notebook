@@ -10,8 +10,9 @@ book:
   chapters:
     - index.qmd
     - content/intro.qmd
-    - content/rural.qmd
     - content/imd.qmd
+    - content/mapping.qmd
+    - content/rural.qmd
     - content/summary.qmd
     - references.qmd
     
