@@ -119,6 +119,9 @@ To apply a rank use the windows partition function `ROW_NUMBER() OVER(ORDER BY I
 
 library(tidyverse)
 library(PostcodesioR)
+library(NHSRpostcodetools) # installed from GitHub not CRAN
+library(fingertipsR)
+library(janitor)
 
 # Generate random example postcodes
 postcodes <- purrr::map_chr(
@@ -126,23 +129,21 @@ postcodes <- purrr::map_chr(
   .f = ~PostcodesioR::random_postcode() |> 
     purrr::pluck(1) 
 ) |> 
-  as.tibble()
+  as_tibble()
 
+# [TODO] find way to get IMD without downloading 32,844 obs
+imd <- read_csv("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833982/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators.csv") %>% 
+  clean_names() 
 
-# [TODO] find way to join to postcode table for LSOA code
+pc_imd <- NHSRpostcodetools::postcode_data_join(.data = postcodes$value) |> 
+  select(postcode,
+         lsoa_code) |> 
+  left_join(imd |> 
+              select(lsoa_code_2011,
+                     score = index_of_multiple_deprivation_imd_score,
+                     national_decile = index_of_multiple_deprivation_imd_decile_where_1_is_most_deprived_10_percent_of_lso_as), join_by(lsoa_code == lsoa_code_2011)) |> 
+   mutate(imd_decile_local = ntile(-score, n = 10)) # creating new deciles from the data provided
 
-postcodes |> 
-  inner_join(postcodeData |> 
-               select(LSOA11) |> 
-               group_by(LSOA11) |> 
-               slice(1), 
-             join_by = c("LSOAcode2011" = "LSOA11")) |> 
-  mutate(Notts_rank = row_number(IMDRank),
-         Notts_decile = ntile(IMDRank, 10)) 
-localRanking |> 
-  select(LSOAcode2011:IMDDecile) |> 
-  head(5) |> 
-  knitr::kable(format = "html")
 ```
 
 # Other useful links
@@ -172,4 +173,3 @@ Another paper from 2016 cites as:
 Looking at the Government page that lists the full text the library assistant said: "I would reference it from the Ministry of Housing, Communities and Local Government which would be more up to date for 2019 and with online references you should always put the date you accessed it. So I would suggest amending to the following:"
 
 Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. 2015. https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015 (Accessed 4 June 2019)
-
