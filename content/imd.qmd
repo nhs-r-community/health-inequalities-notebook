@@ -14,19 +14,20 @@ The latest available IMD data for England is from 2019.
 
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
-[Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index) [English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
+[Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)  
+[English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
 
 # Finding the IMD for an address
 
 To get IMD scores or deciles for a local data a join will be needed to the postcode table (like a directory of postcodes) found:
 
-https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files
+[https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files](https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files)
 
 and then to the IMD data:
 
-https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019
+[https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
 
-Select File 7 for the dataset.
+* Select File 7 for the dataset.
 
 Other data is available from this dataset including IDAOPI which relates to only older people.
 
@@ -105,7 +106,8 @@ data |>
 
 # Creating local IMDs
 
-In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. Packages like [{NHSRpopulations}](https://github.com/nhs-r-community/NHSRpopulation) have functions to do this and more information in the [vignette](https://nhs-r-community.github.io/NHSRpopulation/articles/calc-imd-ranks-within-la.html).
+In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. 
+It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. Packages like [{NHSRpopulations}](https://github.com/nhs-r-community/NHSRpopulation) has code on how to create this in the [vignette](https://nhs-r-community.github.io/NHSRpopulation/articles/calc-imd-ranks-within-la.html).
 
 ## Local IMD creation in SQL
 
@@ -144,28 +146,16 @@ pc_imd <- NHSRpostcodetools::postcode_data_join(.data = postcodes$value) |>
 
 # Other useful links
 
-https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015\_-\_Guidance.pdf
+[https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015\_-\_Guidance.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015\_-\_Guidance.pdf)
 
-https://fingertips.phe.org.uk/search/imd
+[https://fingertips.phe.org.uk/search/imd](https://fingertips.phe.org.uk/search/imd)
 
-http://dclgapps.communities.gov.uk/imd/idmap.html
+[http://dclgapps.communities.gov.uk/imd/idmap.html](http://dclgapps.communities.gov.uk/imd/idmap.html)
 
-Technical report for 2019: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf
+Technical report for 2019: [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf)
 
 # Referencing IMD in a paper or research
 
-From a journal check to see how IMD is referenced in published papers, this was from a 2016 BMJ article that cites the Index in the references as:
+## Suggested citation text
 
-6.  Department for Communities and Local Government. English indices of deprivation 2015. 2015. https://www.gov.uk/government/statistics/ english-indices-of-deprivation-2015
-
-(Taken from https://bmjopen.bmj.com/content/bmjopen/6/11/e012750.full.pdf)
-
-Another paper from 2016 cites as:
-
-16. Department for Communities and Local Government. English Indices of Deprivation 2015. Available online: http://www.gov.uk/government/statistics/english-indices-of-deprivation-2015 (accessed on 27 April 2016).
-
-(taken from https://www.mdpi.com/1660-4601/13/8/750)
-
-Looking at the Government page that lists the full text the library assistant said: "I would reference it from the Ministry of Housing, Communities and Local Government which would be more up to date for 2019 and with online references you should always put the date you accessed it. So I would suggest amending to the following:"
-
-Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. 2015. https://www.gov.uk/government/statistics/english-indices-of-deprivation-2015 (Accessed 4 June 2019)
+Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. [https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) (Accessed 22 January 2022)
