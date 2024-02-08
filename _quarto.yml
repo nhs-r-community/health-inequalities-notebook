@@ -11,7 +11,7 @@ book:
     - index.qmd
     - content/intro.qmd
     - content/background_literature.qmd
-    - content/data-sources.qmd
+    - content/data_sources.qmd
     - content/imd.qmd
     - content/mapping.qmd
     - content/rural.qmd
