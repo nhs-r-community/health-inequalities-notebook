@@ -1,3 +1,21 @@
 ---
 title: "Data Sources"
 ---
+
+## Raw Data
+
+### Indices of Multiple Deprivation (IMD) (2019) Data  
+(Ministry of Housing, Communities, and Local Government)  
+<https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019>{target="_blank"} 
+
+## Publicly Accessible Analysis & Dashboards
+
+### PowerBI dashboard of NHS Acute Trust Catchment Populations  
+(Office for Health Improvement and Disparities)  
+[NHS Acute (Hospital) Trust Catchment Populations](https://app.powerbi.com/view?r=eyJrIjoiODZmNGQ0YzItZDAwZi00MzFiLWE4NzAtMzVmNTUwMThmMTVlIiwidCI6ImVlNGUxNDk5LTRhMzUtNGIyZS1hZDQ3LTVmM2NmOWRlODY2NiIsImMiOjh9){target="_blank"} 
+
+## Dashboards requiring authentication
+
+### Health Inequalities Improvement Programme Dashboard (getting access)
+(NHS England)  
+[Health Inequalities Improvement Programme Dashboard (getting access)](https://future.nhs.uk/connect.ti/InequalitiesImprovement/view?objectID=42240816){target="_blank"}  
