@@ -14,8 +14,6 @@ book:
     - content/data_sources.qmd
     - content/imd.qmd
     - content/mapping.qmd
-    - content/rural.qmd
-    - content/summary.qmd
     - references.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
