@@ -10,7 +10,8 @@ book:
   chapters:
     - index.qmd
     - content/intro.qmd
-    - content/data-sources.qmd
+    - content/background_literature.qmd
+    - content/data_sources.qmd
     - content/imd.qmd
     - content/mapping.qmd
     - content/rural.qmd
