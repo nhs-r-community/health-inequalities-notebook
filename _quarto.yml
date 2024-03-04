@@ -4,6 +4,12 @@ resources:
   - CNAME
 
 book:
+# If you are forking our repo to develop content -- whether for NHS-R Community
+  # or your own purposes -- please disable our Google Analytics tag during development.
+  # If building your own site, replace our GA tag with your own GA tag before deployment.
+  # This will prevent your activity being tracked and counted in our analytics dashboard.
+  # Thank you!
+  google-analytics: "G-REK8J7789H"
   title: "Health Inequalities Book"
   author: "MSDN Collaboration Group"
   date: "last-modified"
