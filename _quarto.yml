@@ -19,6 +19,7 @@ book:
     - content/background_literature.qmd
     - content/data_sources.qmd
     - content/imd.qmd
+    - content/idd-aut.qmd
     - content/mapping.qmd
     - references.qmd
     
