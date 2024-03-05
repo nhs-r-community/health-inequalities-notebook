@@ -1,0 +1,29 @@
+# Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD
+
+## Referral to services versus flags
+
+These details may be recorded, particularly in Provider organisations, although the person may not have referrals or be seen by services specific to these areas.
+When this occurs the data is often referred to a "flag" and is a binary record.
+
+## Registers
+
+GPs have registers of patients for certain conditions to identify them including a [learning disability register](https://www.mencap.org.uk/advice-and-support/health/learning-disability-register).
+The data recorded in these registers may differ from other services in health and social care because there won't necessarily be a link.
+
+## Provider Trusts
+
+Some Provider Trusts provide services for diagnosis and support, usually these are Mental Health Trusts, so identification of patients can sometimes be through these services.
+However, depending on the medical needs of the patient it may be that they are known to the Trust but are not in and never have been in that organisation's specialist services.
+
+Consequently, identifying the cohort of patients that are in these categories may need to be from various sources depending on how data is collected within the Trust's clinical systems.
+
+## Problems with flags
+
+Many clinical systems rely upon binary flags to identify certain groups and this can be problematic for analysts and data scientists as it doesn't necessarily show the date or any changes to these flags.
+The reasoning behind the switching on of a flag may be recorded, but this is likely to be in text within notes and can vary in how it is written, as well as how consistently this is recorded.
+
+If a flag determines more than one category then this can also obscure data, for example `Male` and `Female` with a flag for `Female` does not mean that without the flag everyone is `Male` because there is no option for `Not declared` or `Unknown` amongst other categories.
+
+## NHS England
+
+[National guidance to support integrated care boards to commission acute mental health inpatient services for adults with a learning disability and autistic adults](https://www.england.nhs.uk/long-read/national-guidance-to-support-integrated-care-boards-to-commission-acute-mental-health-inpatient-services-for-adults-with-a-learning-disability-and-autistic-adults)
