@@ -19,12 +19,12 @@ book:
       repo: nhs-r-community/health-inequalities-notebook
   chapters:
     - index.qmd
-    - content/intro.qmd
-    - content/background_literature.qmd
-    - content/data_sources.qmd
-    - content/imd.qmd
-    - content/idd-aut.qmd
-    - content/mapping.qmd
+    - intro.qmd
+    - background_literature.qmd
+    - data_sources.qmd
+    - imd.qmd
+    - idd-aut.qmd
+    - mapping.qmd
     - references.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook

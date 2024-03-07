@@ -10,8 +10,8 @@
     ]
   },
   {
-    "objectID": "content/intro.html",
-    "href": "content/intro.html",
+    "objectID": "intro.html",
+    "href": "intro.html",
     "title": "1  Introduction (from README)",
     "section": "",
     "text": "1.1 Aim\nThe aim of the project is to collect together information that is helpful and relevant to analysts doing work in this space. By doing this, the project will:",
@@ -20,48 +20,58 @@
     ]
   },
   {
-    "objectID": "content/intro.html#aim",
-    "href": "content/intro.html#aim",
+    "objectID": "intro.html#aim",
+    "href": "intro.html#aim",
     "title": "1  Introduction (from README)",
     "section": "",
-    "text": "Become a “Body of Knowledge”, and a quick reference for analysts.\nShare ideas and approaches which analysts can use in their own work, lowering the barrier to entry into this work, and encouraging broader and deeper analytical participation for the benefit of patients.\nShare public examples of previous work, to support conversations with stakeholders during the specification stage of a health inequalities project.\nFoster open-source collaboration in an area of public benefit, in line with reccommendations from the Goldacre Review, and the NHS Digital Sevice Manual.",
+    "text": "Become a “Body of Knowledge”, and a quick reference for analysts.\nShare ideas and approaches which analysts can use in their own work, lowering the barrier to entry into this work, and encouraging broader and deeper analytical participation for the benefit of patients.\nShare public examples of previous work, to support conversations with stakeholders during the specification stage of a health inequalities project.\nFoster open-source collaboration in an area of public benefit, in line with recommendations from the Goldacre Review, and the NHS Digital Sevice Manual.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
   },
   {
-    "objectID": "content/intro.html#who-is-the-audience",
-    "href": "content/intro.html#who-is-the-audience",
+    "objectID": "intro.html#who-is-the-audience",
+    "href": "intro.html#who-is-the-audience",
     "title": "1  Introduction (from README)",
     "section": "1.2 Who is the audience?",
-    "text": "1.2 Who is the audience?\nThe scope is very large, and analysts working in this space come from different types of organisation. For example:\n\nProvider trusts. Analysts with good access to patient-level data who can use their analyses to provide practical descision-support to people directly running services that patients use.\nICBs. Analysts with less access to patient-level data, but with access to information from multiple organisations in a region, and with more context about regional populations, links to public health orgs, and local government.\nNHS “centre”. Analysts from NHS Regions or NHS England who work with government on broad health inequalities intervention planning (eg. those working on the Core20PLUS5 programme).\n\nThe project is organic, and will be taken in the direction that contributors (with some steering from maintainers) choose. For example, if the majority of contributors are from provider trusts, it can be expected that the depth of information relevant to ICBs might be less deep.\nThis is a call to action for contributors to involve themselves in the project! Please get involved if you work in this space, can see a gap, or want to steer the direction of this project.",
+    "text": "1.2 Who is the audience?\nThe scope is very large, and analysts working in this space come from different types of organisation. For example:\n\nProvider trusts. Analysts with good access to patient-level data who can use their analyses to provide practical decision-support to people directly running services that patients use.\nIntegrated Care Boards (ICBs). Analysts with less access to patient-level data, but with access to information from multiple organisations in a region, and with more context about regional populations, links to public health organisations, and local government.\nNHS “centre”. Analysts from NHS Regions or NHS England who work with government on broad health inequalities intervention planning (for example those working on the Core20PLUS5 programme).\n\nThe project is organic, and will be taken in the direction that contributors (with some steering from maintainers) choose. For example, if the majority of contributors are from provider trusts, it can be expected that the depth of information relevant to ICBs might be less deep.\nThis is a call to action for contributors to involve themselves in the project! Please get involved if you work in this space, can see a gap, or want to steer the direction of this project.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
   },
   {
-    "objectID": "content/intro.html#related-projects",
-    "href": "content/intro.html#related-projects",
+    "objectID": "intro.html#related-projects",
+    "href": "intro.html#related-projects",
     "title": "1  Introduction (from README)",
     "section": "1.3 Related projects",
-    "text": "1.3 Related projects\nThis project has a “sister” project, which is a code repository of R code and functions of interest to analysts actively working on data. It is also at an early stage, and there is an open call for contributors. Please get involved if you can. You can find links to both sister projects here:\n\n\n\nName\nPurpose\nLink\n\n\n\n\nmsdn-collab\nHealth inequalities code sharing\nhttps://github.com/nhs-r-community/mdsn-collab\n\n\nHealth Inequalities Notebook\nHealth inequalities information and analytical approach sharing\nhttps://github.com/nhs-r-community/health-inequalities-notebook/",
+    "text": "1.3 Related projects\nThis project has complementary R package projects, which are also open to contribution:\n\n\n\nName\nPurpose\nLink\n\n\n\n\n{NHSRpopulation}\nAn R package to access the Index of Multiple Deprivation API.\nhttps://nhs-r-community.github.io/NHSRpopulation/\n\n\n{NHSRpostcodetools}\nThis is a package of useful functions related to working with Postcodes within (currently) England using the postcodes.io, an API to Open Geography Portal maintained by the ONS (Office of National Statistics).\nhttps://nhs-r-community.github.io/NHSRpostcodetools/",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
   },
   {
-    "objectID": "content/intro.html#contributing",
-    "href": "content/intro.html#contributing",
+    "objectID": "intro.html#contributing",
+    "href": "intro.html#contributing",
     "title": "1  Introduction (from README)",
     "section": "1.4 Contributing",
-    "text": "1.4 Contributing\nPlease see our guidance on how to contribute.\nThis project is released with a Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.\nThe simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.\nEND",
+    "text": "1.4 Contributing\nPlease see our guidance on how to contribute.\nThis project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.\nThe simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
   },
   {
-    "objectID": "content/background_literature.html",
-    "href": "content/background_literature.html",
+    "objectID": "intro.html#comments-and-notations",
+    "href": "intro.html#comments-and-notations",
+    "title": "1  Introduction (from README)",
+    "section": "1.5 Comments and notations",
+    "text": "1.5 Comments and notations\nThis book can receive comments via giscus which is available at the bottom of each page and will require a GitHub account to comment on.\nEach page can also receive notations through hypothes.is and this can be found at the top right of every page. It is an overlay so can be seen even when you scroll down the page. To comment you will need to sign in to a hypothes.is account.\nDetails on how these have been used in the Quarto book can be found through the Quarto documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
+    ]
+  },
+  {
+    "objectID": "background_literature.html",
+    "href": "background_literature.html",
     "title": "2  Background Literature",
     "section": "",
     "text": "Health Inequalities is a large subject. This page presents existing literature which may be helpful and of interest to anyone wanting to learn more. The titles below are listed in chronological order, by publishing date.\n(2010) Fair Society, Healthy Lives (The Marmot Review)\nIn November 2008, Professor Sir Michael Marmot was asked by the then Secretary of State for Health to chair an independent review to propose the most effective evidence-based strategies for reducing health inequalities in England from 2010.\n(2017) The Lammy Review\nAn independent review into the treatment of, and outcomes for, Black, Asian and Minority Ethnic individuals in the Criminal Justice System\n2020) The Marmot Review 10 years on\nThe Health Foundation commissioned the Institute of Health Equity to examine progress in addressing health inequalities in England, 10 years on from the landmark study Fair Society, Healthy Lives (The Marmot Review).\n(2021) Socio-economic inequalities in access to planned hospital care: causes and consequences\nTacking inequalities in health is a long-standing NHS policy objective. Variation in the experiences and outcomes of different communities during the COVID-19 pandemic served to bring this issue back into focus.\n(2022) Strategies to reduce Inequalities in access to planned hospital care\nThe report is primarily aimed at integrated care board (ICB) members. Is addressing inequities in planned hospital care a priority for your organisation? If it is, then we hope this report will help. How much additional care, and of what type, would be required to ‘level-up’ access to planned hospital procedures? Is levelling-up the only solution? What interventions exist that might help reduce inequities? How might an ICB go about setting its strategy? And once set, how should the strategy be monitored?\n(2022) Briefing note for Integrated Care Boards on legal duties in respect of reducing inequalities\n(2022) Ethics Review for Integrated Care Boards\nDeciding to do more for certain groups (and therefore, when resources are finite, almost certainly less for others) in the interests of equity is not a technocratic exercise – it involves value judgements and fundamental questions of decision-making legitimacy. It also involves a full appreciation of legal duties. To try to help ICBs and others in taking the insights from these Strategy Unit reports into action, we have commissioned some further perspectives on the possible strategies we have described to reduce inequalities in access to planned hospital care. The first of these - this publication from colleagues at Hill Dickinson - starts with an up-to-date overview of the legal duties placed upon ICB decision makers in relation to reducing inequalities and then considers the range of possible strategies proposed in our report from that legal perspective.\n(2023) NHS England’s statement on information on health inequalities (duty under section 13SA of the National Health Service Act 2006) Integrated care boards, trusts and foundation trusts should use this statement to identify key information on health inequalities and set out how they have responded to it in annual reports.",
@@ -70,8 +80,8 @@
     ]
   },
   {
-    "objectID": "content/data_sources.html",
-    "href": "content/data_sources.html",
+    "objectID": "data_sources.html",
+    "href": "data_sources.html",
     "title": "3  Data Sources",
     "section": "",
     "text": "3.1 Raw Data",
@@ -80,8 +90,8 @@
     ]
   },
   {
-    "objectID": "content/data_sources.html#raw-data",
-    "href": "content/data_sources.html#raw-data",
+    "objectID": "data_sources.html#raw-data",
+    "href": "data_sources.html#raw-data",
     "title": "3  Data Sources",
     "section": "",
     "text": "3.1.1 Indices of Multiple Deprivation (IMD) (2019) Data\n(Ministry of Housing, Communities, and Local Government)\nhttps://www.gov.uk/government/statistics/english-indices-of-deprivation-2019",
@@ -90,8 +100,8 @@
     ]
   },
   {
-    "objectID": "content/data_sources.html#publicly-accessible-analysis-dashboards",
-    "href": "content/data_sources.html#publicly-accessible-analysis-dashboards",
+    "objectID": "data_sources.html#publicly-accessible-analysis-dashboards",
+    "href": "data_sources.html#publicly-accessible-analysis-dashboards",
     "title": "3  Data Sources",
     "section": "3.2 Publicly Accessible Analysis & Dashboards",
     "text": "3.2 Publicly Accessible Analysis & Dashboards\n\n3.2.1 PowerBI dashboard of NHS Acute Trust Catchment Populations\n(Office for Health Improvement and Disparities)\nNHS Acute (Hospital) Trust Catchment Populations",
@@ -100,8 +110,8 @@
     ]
   },
   {
-    "objectID": "content/data_sources.html#dashboards-requiring-authentication",
-    "href": "content/data_sources.html#dashboards-requiring-authentication",
+    "objectID": "data_sources.html#dashboards-requiring-authentication",
+    "href": "data_sources.html#dashboards-requiring-authentication",
     "title": "3  Data Sources",
     "section": "3.3 Dashboards requiring authentication",
     "text": "3.3 Dashboards requiring authentication\n\n3.3.1 Health Inequalities Improvement Programme Dashboard (getting access)\n(NHS England)\nHealth Inequalities Improvement Programme Dashboard (getting access)",
@@ -110,8 +120,8 @@
     ]
   },
   {
-    "objectID": "content/imd.html",
-    "href": "content/imd.html",
+    "objectID": "imd.html",
+    "href": "imd.html",
     "title": "4  Index of Multiple Deprivation (IMD)",
     "section": "",
     "text": "5 Index of Multiple Deprivation\nThe latest available IMD data for England is from 2019.\nIMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.\nWikipedia link\nEnglish IMD 2015 - Guidance",
@@ -120,8 +130,8 @@
     ]
   },
   {
-    "objectID": "content/imd.html#local-imd-creation-in-sql",
-    "href": "content/imd.html#local-imd-creation-in-sql",
+    "objectID": "imd.html#local-imd-creation-in-sql",
+    "href": "imd.html#local-imd-creation-in-sql",
     "title": "4  Index of Multiple Deprivation (IMD)",
     "section": "9.1 Local IMD creation in SQL",
     "text": "9.1 Local IMD creation in SQL\nTo apply a rank use the windows partition function ROW_NUMBER() OVER(ORDER BY IMDRank) to create a new ranking score and NTILE(10) OVER (ORDER BY IMDRank) to create new deciles.",
@@ -130,8 +140,8 @@
     ]
   },
   {
-    "objectID": "content/imd.html#local-imd-creation-in-r",
-    "href": "content/imd.html#local-imd-creation-in-r",
+    "objectID": "imd.html#local-imd-creation-in-r",
+    "href": "imd.html#local-imd-creation-in-r",
     "title": "4  Index of Multiple Deprivation (IMD)",
     "section": "9.2 Local IMD creation in R",
     "text": "9.2 Local IMD creation in R\n\nlibrary(tidyverse)\nlibrary(PostcodesioR)\nlibrary(NHSRpostcodetools) # installed from GitHub not CRAN\nlibrary(NHSRpopulation)\nlibrary(janitor)\n\n# Generate random example postcodes\npostcodes &lt;- purrr::map_chr(\n  1:10,\n  .f = ~PostcodesioR::random_postcode() |&gt; \n    purrr::pluck(1) \n) |&gt; \n  as_tibble()\n\npc_imd &lt;- NHSRpostcodetools::postcode_data_join(.data = postcodes$value) |&gt; \n  select(postcode,\n         lsoa_code) |&gt; \n  left_join(NHSRpopulation::imd |&gt; \n              select(lsoa_code,\n                     imd_score,\n                     imd_decile), join_by(lsoa_code == lsoa_code)) |&gt; \n   mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided",
@@ -140,8 +150,8 @@
     ]
   },
   {
-    "objectID": "content/imd.html#suggested-citation-text",
-    "href": "content/imd.html#suggested-citation-text",
+    "objectID": "imd.html#suggested-citation-text",
+    "href": "imd.html#suggested-citation-text",
     "title": "4  Index of Multiple Deprivation (IMD)",
     "section": "11.1 Suggested citation text",
     "text": "11.1 Suggested citation text\nMinistry of Housing, Communities and Local Government. English Indices of Deprivation 2015. https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019 (Accessed 22 January 2022)",
@@ -150,8 +160,8 @@
     ]
   },
   {
-    "objectID": "content/idd-aut.html",
-    "href": "content/idd-aut.html",
+    "objectID": "idd-aut.html",
+    "href": "idd-aut.html",
     "title": "5  Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD",
     "section": "",
     "text": "5.1 Referral to services versus flags\nThese details may be recorded, particularly in Provider organisations, although the person may not have referrals or be seen by services specific to these areas. When this occurs the data is often referred to a “flag” and is a binary record.",
@@ -160,8 +170,8 @@
     ]
   },
   {
-    "objectID": "content/idd-aut.html#registers",
-    "href": "content/idd-aut.html#registers",
+    "objectID": "idd-aut.html#registers",
+    "href": "idd-aut.html#registers",
     "title": "5  Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD",
     "section": "5.2 Registers",
     "text": "5.2 Registers\nGPs have registers of patients for certain conditions to identify them including a learning disability register. The data recorded in these registers may differ from other services in health and social care because there won’t necessarily be a link.",
@@ -170,8 +180,8 @@
     ]
   },
   {
-    "objectID": "content/idd-aut.html#provider-trusts",
-    "href": "content/idd-aut.html#provider-trusts",
+    "objectID": "idd-aut.html#provider-trusts",
+    "href": "idd-aut.html#provider-trusts",
     "title": "5  Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD",
     "section": "5.3 Provider Trusts",
     "text": "5.3 Provider Trusts\nSome Provider Trusts provide services for diagnosis and support, usually these are Mental Health Trusts, so identification of patients can sometimes be through these services. However, depending on the medical needs of the patient it may be that they are known to the Trust but are not in and never have been in that organisation’s specialist services.\nConsequently, identifying the cohort of patients that are in these categories may need to be from various sources depending on how data is collected within the Trust’s clinical systems.",
@@ -180,8 +190,8 @@
     ]
   },
   {
-    "objectID": "content/idd-aut.html#problems-with-flags",
-    "href": "content/idd-aut.html#problems-with-flags",
+    "objectID": "idd-aut.html#problems-with-flags",
+    "href": "idd-aut.html#problems-with-flags",
     "title": "5  Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD",
     "section": "5.4 Problems with flags",
     "text": "5.4 Problems with flags\nMany clinical systems rely upon binary flags to identify certain groups and this can be problematic for analysts and data scientists as it doesn’t necessarily show the date or any changes to these flags. The reasoning behind the switching on of a flag may be recorded, but this is likely to be in text within notes and can vary in how it is written, as well as how consistently this is recorded.\nIf a flag determines more than one category then this can also obscure data, for example Male and Female with a flag for Female does not mean that without the flag everyone is Male because there is no option for Not declared or Unknown amongst other categories.",
@@ -190,8 +200,8 @@
     ]
   },
   {
-    "objectID": "content/idd-aut.html#nhs-england",
-    "href": "content/idd-aut.html#nhs-england",
+    "objectID": "idd-aut.html#nhs-england",
+    "href": "idd-aut.html#nhs-england",
     "title": "5  Intellectual Developmental Disability (IDD), Learning Disablity (LD), Autism and ADHD",
     "section": "5.5 NHS England",
     "text": "5.5 NHS England\nNational guidance to support integrated care boards to commission acute mental health inpatient services for adults with a learning disability and autistic adults",
@@ -200,8 +210,8 @@
     ]
   },
   {
-    "objectID": "content/mapping.html",
-    "href": "content/mapping.html",
+    "objectID": "mapping.html",
+    "href": "mapping.html",
     "title": "6  Mapping",
     "section": "",
     "text": "7 Centroid mapping\nSometimes you have a set of addresses but no way of mapping them. The Office for National Statistics’ Open Geography Portal provides the centroids for all UK postcodes.\nUsing R to get centroid information: https://www.trafforddatalab.io/recipes/gis/postcodes.html#",
