@@ -2,36 +2,26 @@
 title: "Background Literature"
 ---
 
-Health Inequalities is a large subject.  This page presents existing literature which may be helpful and of interest to anyone wanting to learn more.  The titles below are listed in chronological order, by publishing date.  
+Health Inequalities is a large subject. This page presents existing literature which may be helpful and of interest to anyone wanting to learn more. The titles below are listed in chronological order, by publishing date.
 
-[(2010) Fair Society, Healthy Lives (The Marmot Review)](https://www.instituteofhealthequity.org/resources-reports/fair-society-healthy-lives-the-marmot-review){target="_blank"}  
+[(2010) Fair Society, Healthy Lives (The Marmot Review)](https://www.instituteofhealthequity.org/resources-reports/fair-society-healthy-lives-the-marmot-review){target="_blank"}\
 In November 2008, Professor Sir Michael Marmot was asked by the then Secretary of State for Health to chair an independent review to propose the most effective evidence-based strategies for reducing health inequalities in England from 2010.
 
-[(2017) The Lammy Review](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/643001/lammy-review-final-report.pdf){target="_blank"}  
-An independent review into the treatment of, and outcomes for, Black, Asian and Minority Ethnic individuals in the 
-Criminal Justice System
+[(2017) The Lammy Review](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/643001/lammy-review-final-report.pdf){target="_blank"}\
+An independent review into the treatment of, and outcomes for, Black, Asian and Minority Ethnic individuals in the Criminal Justice System
 
-[2020) The Marmot Review 10 years on](https://www.health.org.uk/publications/reports/the-marmot-review-10-years-on){target="_blank"}  
+[2020) The Marmot Review 10 years on](https://www.health.org.uk/publications/reports/the-marmot-review-10-years-on){target="_blank"}\
 The Health Foundation commissioned the Institute of Health Equity to examine progress in addressing health inequalities in England, 10 years on from the landmark study Fair Society, Healthy Lives (The Marmot Review).
 
-[(2021) Socio-economic inequalities in access to planned hospital care: causes and consequences](https://www.strategyunitwm.nhs.uk/publications/socio-economic-inequalities-access-planned-hospital-care-causes-and-consequences){target="_blank"}  
+[(2021) Socio-economic inequalities in access to planned hospital care: causes and consequences](https://www.strategyunitwm.nhs.uk/publications/socio-economic-inequalities-access-planned-hospital-care-causes-and-consequences){target="_blank"}\
 Tacking inequalities in health is a long-standing NHS policy objective. Variation in the experiences and outcomes of different communities during the COVID-19 pandemic served to bring this issue back into focus.
 
-[(2022) Strategies to reduce Inequalities in access to planned hospital care](https://www.midlandsdecisionsupport.nhs.uk/knowledge-library/strategies-to-reduce-inequalities-in-access-to-planned-hospital-procedures/){target="_blank"}  
-The report is primarily aimed at integrated care board (ICB) members. Is addressing 
-inequities in planned hospital care a priority for your organisation? If it is, then we hope 
-this report will help. How much additional care, and of what type, would be required to 
-‘level-up’ access to planned hospital procedures? Is levelling-up the only solution? What 
-interventions exist that might help reduce inequities? How might an ICB go about setting 
-its strategy? And once set, how should the strategy be monitored?
+[(2022) Strategies to reduce Inequalities in access to planned hospital care](https://www.midlandsdecisionsupport.nhs.uk/knowledge-library/strategies-to-reduce-inequalities-in-access-to-planned-hospital-procedures/){target="_blank"}\
+The report is primarily aimed at integrated care board (ICB) members. Is addressing inequities in planned hospital care a priority for your organisation? If it is, then we hope this report will help. How much additional care, and of what type, would be required to ‘level-up’ access to planned hospital procedures? Is levelling-up the only solution? What interventions exist that might help reduce inequities? How might an ICB go about setting its strategy? And once set, how should the strategy be monitored?
 
-[(2022) Briefing note for Integrated Care Boards on legal duties in respect of reducing inequalities](https://www.midlandsdecisionsupport.nhs.uk/wp-content/uploads/2022/08/Briefing-note-for-Integrated-Care-Boards.pdf){target="_blank"}  
-[(2022) Ethics Review for Integrated Care Boards](https://www.midlandsdecisionsupport.nhs.uk/wp-content/uploads/2023/02/Ethics_Review_FINAL.pdf){target="_blank"}  
-Deciding to do more for certain groups (and therefore, when resources are finite, almost certainly less for others) 
-in the interests of equity is not a technocratic exercise – it involves value judgements and fundamental questions of
-decision-making legitimacy. It also involves a full appreciation of legal duties. To try to help ICBs and others in taking 
-the insights from these Strategy Unit reports into action, we have commissioned some further perspectives on the possible
-strategies we have described to reduce inequalities in access to planned hospital care. The first of these - this 
-publication from colleagues at Hill Dickinson - starts with an up-to-date overview of the legal duties placed upon ICB
-decision makers in relation to reducing inequalities and then considers the range of possible strategies proposed in 
-our report from that legal perspective. 
+[(2022) Briefing note for Integrated Care Boards on legal duties in respect of reducing inequalities](https://www.midlandsdecisionsupport.nhs.uk/wp-content/uploads/2022/08/Briefing-note-for-Integrated-Care-Boards.pdf){target="_blank"}\
+[(2022) Ethics Review for Integrated Care Boards](https://www.midlandsdecisionsupport.nhs.uk/wp-content/uploads/2023/02/Ethics_Review_FINAL.pdf){target="_blank"}\
+Deciding to do more for certain groups (and therefore, when resources are finite, almost certainly less for others) in the interests of equity is not a technocratic exercise – it involves value judgements and fundamental questions of decision-making legitimacy. It also involves a full appreciation of legal duties. To try to help ICBs and others in taking the insights from these Strategy Unit reports into action, we have commissioned some further perspectives on the possible strategies we have described to reduce inequalities in access to planned hospital care. The first of these - this publication from colleagues at Hill Dickinson - starts with an up-to-date overview of the legal duties placed upon ICB decision makers in relation to reducing inequalities and then considers the range of possible strategies proposed in our report from that legal perspective.
+
+[(2023) NHS England’s statement on information on health inequalities (duty under section 13SA of the National Health Service Act 2006)](https://www.england.nhs.uk/long-read/nhs-englands-statement-on-information-on-health-inequalities-duty/){target="_blank"}
+Integrated care boards, trusts and foundation trusts should use this statement to identify key information on health inequalities and set out how they have responded to it in annual reports.
