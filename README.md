@@ -28,7 +28,7 @@ The project is organic, and will be taken in the direction that contributors (wi
 
 ## Related projects
 
-This project has a "sister" project, which is a code repository of R code and functions of interest to analysts actively working on data. It is also at an early stage, and there is an open call for contributors. Please get involved if you can. You can find links to both sister projects here:
+This project has complementary R package projects, which are also open to contribution:
 
 | Name                | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Link                                                 |
 |-------------------|-----------------------------|------------------------|
@@ -39,7 +39,7 @@ This project has a "sister" project, which is a code repository of R code and fu
 
 Please see our [guidance on how to contribute](https://tools.nhsrcommunity.com/contribution.html).
 
-This project is released with a Contributor [Code of Conduct](./content/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+This project is released with a [Code of Conduct](./CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
 The simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.
 
