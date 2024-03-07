@@ -13,6 +13,10 @@ book:
   title: "Health Inequalities Book"
   author: "MSDN Collaboration Group"
   date: "last-modified"
+  comments:
+    hypothesis: true
+    giscus:
+      repo: nhs-r-community/health-inequalities-notebook
   chapters:
     - index.qmd
     - content/intro.qmd
