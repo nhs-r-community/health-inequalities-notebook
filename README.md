@@ -31,20 +31,22 @@ The project is organic, and will be taken in the direction that contributors (wi
 This project has a "sister" project, which is a code repository of R code and functions of interest to analysts actively working on data. It is also at an early stage, and there is an open call for contributors. Please get involved if you can. You can find links to both sister projects here:
 
 | Name                         | Purpose                                                         | Link                                                               |
-|------------------|------------------------------|------------------------|
+|-------------------|------------------------------|------------------------|
 | msdn-collab                  | Health inequalities code sharing                                | <https://github.com/nhs-r-community/mdsn-collab>                   |
 | Health Inequalities Notebook | Health inequalities information and analytical approach sharing | <https://github.com/nhs-r-community/health-inequalities-notebook/> |
 
 ## Contributing
 
-Please see our 
-[guidance on how to contribute](https://tools.nhsrcommunity.com/contribution.html).
+Please see our [guidance on how to contribute](https://tools.nhsrcommunity.com/contribution.html).
 
-This project is released with a Contributor [Code of Conduct](./CODE_OF_CONDUCT.md). 
-By contributing to this project, you agree to abide by its terms.
+This project is released with a Contributor [Code of Conduct](./content/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
-The simplest way to contribute is to raise an issue detailing the feature or 
-functionality you would like to see added, or any unexpected behaviour or bugs 
-you have experienced.
+The simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.
 
-END
+## Comments and notations
+
+This book can receive comments via [giscus](https://giscus.app/) which is available at the bottom of each page and will require a GitHub account to comment on.
+
+Each page can also receive notations through [hypothes.is](https://web.hypothes.is/about/) and this can be found at the top right of every page. It is an overlay so can be seen even when you scroll down the page. To comment you will need to sign in to a hypothes.is account.
+
+Details on how these have been used in the Quarto book can be found through the [Quarto documentation](https://quarto.org/docs/reference/projects/books.html#comments).
