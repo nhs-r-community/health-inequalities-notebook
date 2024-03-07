@@ -48,9 +48,6 @@ Details on how these have been used in the Quarto book can be found through the 
 
 This project has complementary R package projects within NHS-R Community, which are also open to contribution:
 
-| Name                                                                                                                      | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|--------------------|------------------------------------------------------|
-| [{NHSRpopulation}](https://nhs-r-community.github.io/NHSRpopulation/ "Link to the {NHSRpopulation} package website")      | An R package to access the Index of Multiple Deprivation API.                                                                                                                                                                                                                                                                                                                                                                                            |
-| [{NHSRpostcodetools}](https://nhs-r-community.github.io/NHSRpostcodetools/ "Link to {NHSRpostcodetools} package website") | This is a package of useful functions related to working with Postcodes within (currently) England using the [postcodes.io](https://postcodes.io/), an API to [Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/postcode-to-output-area-to-lower-layer-super-output-area-to-middle-layer-super-output-area-to-local-authority-district-november-2018-lookup-in-the-uk-3/about) maintained by the ONS (Office of National Statistics). |
+[{NHSRpopulation}](https://nhs-r-community.github.io/NHSRpopulation/ "Link to the {NHSRpopulation} package website") - An R package to access the Index of Multiple Deprivation API.
 
-## 
+[{NHSRpostcodetools}](https://nhs-r-community.github.io/NHSRpostcodetools/ "Link to {NHSRpostcodetools} package website") - This is a package of useful functions related to working with Postcodes.
