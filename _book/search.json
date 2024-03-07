@@ -34,17 +34,7 @@
     "href": "intro.html#who-is-the-audience",
     "title": "1  Introduction (from README)",
     "section": "1.2 Who is the audience?",
-    "text": "1.2 Who is the audience?\nThe scope is very large, and analysts working in this space come from different types of organisation. For example:\n\nProvider trusts. Analysts with good access to patient-level data who can use their analyses to provide practical decision-support to people directly running services that patients use.\nIntegrated Care Boards (ICBs). Analysts with less access to patient-level data, but with access to information from multiple organisations in a region, and with more context about regional populations, links to public health organisations, and local government.\nNHS “centre”. Analysts from NHS Regions or NHS England who work with government on broad health inequalities intervention planning (for example those working on the Core20PLUS5 programme).\n\nThe project is organic, and will be taken in the direction that contributors (with some steering from maintainers) choose. For example, if the majority of contributors are from provider trusts, it can be expected that the depth of information relevant to ICBs might be less deep.\nThis is a call to action for contributors to involve themselves in the project! Please get involved if you work in this space, can see a gap, or want to steer the direction of this project.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
-    ]
-  },
-  {
-    "objectID": "intro.html#related-projects",
-    "href": "intro.html#related-projects",
-    "title": "1  Introduction (from README)",
-    "section": "1.3 Related projects",
-    "text": "1.3 Related projects\nThis project has complementary R package projects, which are also open to contribution:\n\n\n\nName\nPurpose\nLink\n\n\n\n\n{NHSRpopulation}\nAn R package to access the Index of Multiple Deprivation API.\nhttps://nhs-r-community.github.io/NHSRpopulation/\n\n\n{NHSRpostcodetools}\nThis is a package of useful functions related to working with Postcodes within (currently) England using the postcodes.io, an API to Open Geography Portal maintained by the ONS (Office of National Statistics).\nhttps://nhs-r-community.github.io/NHSRpostcodetools/",
+    "text": "1.2 Who is the audience?\nThe scope is very large, and analysts working in this space come from different types of organisations. For example:\n\nProvider trusts. Analysts with good access to patient-level data who can use their analyses to provide practical decision-support to people directly running services that patients use.\nIntegrated Care Boards (ICBs). Analysts with less access to patient-level data, but with access to information from multiple organisations in a region, and with more context about regional populations, links to public health organisations, and local government.\nNHS “centre”. Analysts from NHS Regions or NHS England who work with government on broad health inequalities intervention planning (for example those working on the Core20PLUS5 programme).\nPublic Health analysts. Analysts who may be working in Local Authorities or in Government Civil Service bodies who work with Public Health data.\n\nThe project is organic, and will be taken in the direction that contributors. Some of the information may be relevant to only certain areas but one of the issues we face, as analysts, new and old is that this information is hidden. It may be that one area does something different but sharing this can influence how others collect and analyse their data.\nThis is a call to action for contributors to involve themselves in the project! Please get involved if you work in this space, can see a gap, or want to steer the direction of this project.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
@@ -53,8 +43,8 @@
     "objectID": "intro.html#contributing",
     "href": "intro.html#contributing",
     "title": "1  Introduction (from README)",
-    "section": "1.4 Contributing",
-    "text": "1.4 Contributing\nPlease see our guidance on how to contribute.\nThis project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.\nThe simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.",
+    "section": "1.3 Contributing",
+    "text": "1.3 Contributing\nPlease see our guidance on how to contribute.\nThis project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.\nThe simplest way to contribute is to raise an issue detailing the feature or functionality you would like to see added, or any unexpected behaviour or bugs you have experienced.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
@@ -63,8 +53,18 @@
     "objectID": "intro.html#comments-and-notations",
     "href": "intro.html#comments-and-notations",
     "title": "1  Introduction (from README)",
-    "section": "1.5 Comments and notations",
-    "text": "1.5 Comments and notations\nThis book can receive comments via giscus which is available at the bottom of each page and will require a GitHub account to comment on.\nEach page can also receive notations through hypothes.is and this can be found at the top right of every page. It is an overlay so can be seen even when you scroll down the page. To comment you will need to sign in to a hypothes.is account.\nDetails on how these have been used in the Quarto book can be found through the Quarto documentation.",
+    "section": "1.4 Comments and notations",
+    "text": "1.4 Comments and notations\nThis book can receive comments via giscus which is available at the bottom of each page and will require a GitHub account to comment on.\nEach page can also receive notations through hypothes.is and this can be found at the top right of every page. It is an overlay so can be seen even when you scroll down the page. To comment you will need to sign in to a hypothes.is account.\nDetails on how these have been used in the Quarto book can be found through the Quarto documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#related-projects",
+    "href": "intro.html#related-projects",
+    "title": "1  Introduction (from README)",
+    "section": "1.5 Related projects",
+    "text": "1.5 Related projects\nThis project has complementary R package projects within NHS-R Community, which are also open to contribution:\n{NHSRpopulation} - An R package to access the Index of Multiple Deprivation API.\n{NHSRpostcodetools} - This is a package of useful functions related to working with Postcodes.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction (from README)</span>"
     ]
