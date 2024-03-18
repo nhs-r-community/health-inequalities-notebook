@@ -21,6 +21,7 @@ book:
     - index.qmd
     - intro.qmd
     - background_literature.qmd
+    - nhs-number.qmd
     - data_sources.qmd
     - imd.qmd
     - idd-aut.qmd
