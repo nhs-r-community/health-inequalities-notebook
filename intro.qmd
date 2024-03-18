@@ -1,3 +1,16 @@
-# Introduction (from README)
+# NHS Number
 
-{{< include ./README.md >}}
+In England, Wales and Isle of Man patients are recorded by a unique NHS Number.
+The [Wikipedia page](https://en.wikipedia.org/wiki/NHS_number) on the NHS Number is a useful public resource on this number, its generation and history.
+
+Specific R packages for validating or generating NHS Numbers have been listed in the NHS-R Community book [Open Analytics Resources](https://resources.nhsrcommunity.com/tools.html#nhs-numberchi-number-validation).
+
+In Scotland and Northern Ireland the patient ID used is called the CHI (Community Health Index) number and there is a specific [Wikipedia page](https://en.wikipedia.org/wiki/National_Health_Service_Central_Register) for Scotland.
+According to the NHS Number page though, although the two systems have the same name they are not linked and overlap.
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+## Contributing to open source (tip)
+It is highly recommended that if there are any resources or public information relating to NHS or CHI numbers that the Wikipedia pages are updated as these are central, searchable public areas of knowledge.
+
+Contribution only requires an account with Wikipedia and links to sources to cite appropriately.
+:::
