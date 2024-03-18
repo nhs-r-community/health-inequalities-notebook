@@ -2,19 +2,13 @@
 title: "Index of Multiple Deprivation (IMD)"
 ---
 
-```{r}
-#| label: setup
-#| echo: true
-#| eval: false
-```
-
 # Index of Multiple Deprivation
 
 The latest available IMD data for England is from 2019.
 
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
-[Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)  
+[Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)\
 [English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
 
 # Finding the IMD for an address
@@ -27,7 +21,7 @@ and then to the IMD data:
 
 [https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
 
-* Select File 7 for the dataset.
+-   Select File 7 for the dataset.
 
 Other data is available from this dataset including IDAOPI which relates to only older people.
 
@@ -46,7 +40,12 @@ in R it can be
 ```{r}
 #| label: postcode-no-space
 postcode <- "NG16 1AA"
+
+# base R
 gsub(" ","",postcode)
+
+# {stringr} also available in {tidyverse}
+stringr::str_remove(postcode, " ")
 ```
 
 ### Partial postcodes
@@ -85,11 +84,15 @@ ORDER BY IMDDecile
 
 ### Quintiles in R
 
-```{r }
-#| label: r-quintile
-#| eval: true 
+```{r}
+#| label: load-packages
+#| include: false
 
 library(tidyverse)
+```
+
+```{r }
+#| label: r-quintile
 
 # Generate a dataset
 data <- structure(list(IMDDecile = c(0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 
@@ -107,7 +110,7 @@ data |>
 # Creating local IMDs
 
 In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. 
-It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. Packages like [{NHSRpopulations}](https://github.com/nhs-r-community/NHSRpopulation) has code on how to create this in the [vignette](https://nhs-r-community.github.io/NHSRpopulation/articles/calc-imd-ranks-within-la.html).
+It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. 
 
 ## Local IMD creation in SQL
 
@@ -128,34 +131,33 @@ library(janitor)
 # Generate random example postcodes
 postcodes <- purrr::map_chr(
   1:10,
-  .f = ~PostcodesioR::random_postcode() |> 
-    purrr::pluck(1) 
-) |> 
-  as_tibble()
+  .f = ~ PostcodesioR::random_postcode() |>
+    purrr::pluck(1)
+)
 
-pc_imd <- NHSRpostcodetools::postcode_data_join(.data = postcodes$value) |> 
-  select(postcode,
-         lsoa_code) |> 
-  left_join(NHSRpopulation::imd |> 
-              select(lsoa_code,
-                     imd_score,
-                     imd_decile), join_by(lsoa_code == lsoa_code)) |> 
-   mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided
+# Create a tibble
+tibble_postcodes <- postcodes |>
+  tibble::as_tibble()
+
+# For a vector
+NHSRpopulation::get_imd(tibble_postcodes$value) |>
+  dplyr::select(1:5) |> 
+  mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided
 
 ```
 
 # Other useful links
 
-[https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015\_-\_Guidance.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015\_-\_Guidance.pdf)
+<https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf>
 
-[https://fingertips.phe.org.uk/search/imd](https://fingertips.phe.org.uk/search/imd)
+<https://fingertips.phe.org.uk/search/imd>
 
-[http://dclgapps.communities.gov.uk/imd/idmap.html](http://dclgapps.communities.gov.uk/imd/idmap.html)
+<http://dclgapps.communities.gov.uk/imd/idmap.html>
 
-Technical report for 2019: [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf)
+Technical report for 2019: <https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf>
 
 # Referencing IMD in a paper or research
 
 ## Suggested citation text
 
-Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. [https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) (Accessed 22 January 2022)
+Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019> (Accessed 22 January 2022)

@@ -273,9 +273,9 @@ gtag('config', 'G-REK8J7789H', { 'anonymize_ip': true});
 <section id="finding-the-imd-for-an-address" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Finding the IMD for an address</h1>
 <p>To get IMD scores or deciles for a local data a join will be needed to the postcode table (like a directory of postcodes) found:</p>
-<p><a href="https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files">https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files</a></p>
+<p><a href="https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files" class="uri">https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files</a></p>
 <p>and then to the IMD data:</p>
-<p><a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019</a></p>
+<p><a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" class="uri">https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019</a></p>
 <ul>
 <li>Select File 7 for the dataset.</li>
 </ul>
@@ -289,7 +289,14 @@ gtag('config', 'G-REK8J7789H', { 'anonymize_ip': true});
 <p>in R it can be</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>postcode <span class="ot">&lt;-</span> <span class="st">"NG16 1AA"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="st">" "</span>,<span class="st">""</span>,postcode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># base R</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="st">" "</span>,<span class="st">""</span>,postcode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "NG161AA"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># {stringr} also available in {tidyverse}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>stringr<span class="sc">::</span><span class="fu">str_remove</span>(postcode, <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "NG161AA"</code></pre>
 </div>
@@ -305,10 +312,10 @@ gtag('config', 'G-REK8J7789H', { 'anonymize_ip': true});
 <p>To get the IMD score the LSOA (Lower Super Output Area) code is required which is taken from the full postcode.</p>
 <p>This code will not run and is dependent on the naming conventions of the SQL server. The column names of LSOA11 and <code>LSOAcode2011</code> will have come from the data sources. The column <code>PostCode_space</code> has been added to the original data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> imd.<span class="op">*</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> DIM_AI.PatientData <span class="kw">AS</span> p</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> DIM_AI.PostCodes <span class="kw">AS</span> pc <span class="kw">ON</span> p.PostCode <span class="op">=</span> pc.PostCode_space</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> DIM_AI.IMD <span class="kw">AS</span> i <span class="kw">ON</span> pc.PC.LSOA11 <span class="op">=</span> i.LSOAcode2011</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> imd.<span class="op">*</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> DIM_AI.PatientData <span class="kw">AS</span> p</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> DIM_AI.PostCodes <span class="kw">AS</span> pc <span class="kw">ON</span> p.PostCode <span class="op">=</span> pc.PostCode_space</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> DIM_AI.IMD <span class="kw">AS</span> i <span class="kw">ON</span> pc.PC.LSOA11 <span class="op">=</span> i.LSOAcode2011</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="creating-quintiles" class="level1" data-number="8">
@@ -317,54 +324,26 @@ gtag('config', 'G-REK8J7789H', { 'anonymize_ip': true});
 <section id="quintiles-in-sql" class="level3" data-number="8.0.1">
 <h3 data-number="8.0.1" class="anchored" data-anchor-id="quintiles-in-sql"><span class="header-section-number">8.0.1</span> Quintiles in SQL</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> IMDDecile,</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">FLOOR</span>((IMDDecile<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">1</span> <span class="kw">AS</span> IMDQuintile</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> DIM_AI.IMD</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> IMDDecile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> IMDDecile,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">FLOOR</span>((IMDDecile<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>) <span class="op">+</span> <span class="dv">1</span> <span class="kw">AS</span> IMDQuintile</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> DIM_AI.IMD</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> IMDDecile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="quintiles-in-r" class="level3" data-number="8.0.2">
 <h3 data-number="8.0.2" class="anchored" data-anchor-id="quintiles-in-r"><span class="header-section-number">8.0.2</span> Quintiles in R</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'stringr' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a dataset</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">IMDDecile =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">3</span>L, <span class="dv">4</span>L, <span class="dv">5</span>L, <span class="dv">6</span>L, <span class="dv">7</span>L, </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>L, <span class="dv">9</span>L, <span class="dv">10</span>L, <span class="cn">NA</span>)), <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="sc">-</span><span class="dv">12</span>L), <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"tbl_df"</span>, </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="st">"tbl"</span>, <span class="st">"data.frame"</span>))</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the 0 generated into NA</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace_na</span>(<span class="fu">list</span>(<span class="at">IMDDecile =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IMDQuintile =</span> <span class="fu">floor</span>((IMDDecile<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="dv">1</span>,</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">IMDQuintile =</span> <span class="fu">as.character</span>(IMDQuintile)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a dataset</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">structure</span>(<span class="fu">list</span>(<span class="at">IMDDecile =</span> <span class="fu">c</span>(<span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">3</span>L, <span class="dv">4</span>L, <span class="dv">5</span>L, <span class="dv">6</span>L, <span class="dv">7</span>L, </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>L, <span class="dv">9</span>L, <span class="dv">10</span>L, <span class="cn">NA</span>)), <span class="at">row.names =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="sc">-</span><span class="dv">12</span>L), <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"tbl_df"</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st">"tbl"</span>, <span class="st">"data.frame"</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the 0 generated into NA</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace_na</span>(<span class="fu">list</span>(<span class="at">IMDDecile =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">IMDQuintile =</span> <span class="fu">floor</span>((IMDDecile<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="dv">1</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">IMDQuintile =</span> <span class="fu">as.character</span>(IMDQuintile)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>         )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    IMDDecile IMDQuintile
@@ -395,43 +374,43 @@ gtag('config', 'G-REK8J7789H', { 'anonymize_ip': true});
 <section id="local-imd-creation-in-r" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="local-imd-creation-in-r"><span class="header-section-number">9.2</span> Local IMD creation in R</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PostcodesioR)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHSRpostcodetools) <span class="co"># installed from GitHub not CRAN</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHSRpopulation)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random example postcodes</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>postcodes <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_chr</span>(</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">.f =</span> <span class="sc">~</span>PostcodesioR<span class="sc">::</span><span class="fu">random_postcode</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    purrr<span class="sc">::</span><span class="fu">pluck</span>(<span class="dv">1</span>) </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>pc_imd <span class="ot">&lt;-</span> NHSRpostcodetools<span class="sc">::</span><span class="fu">postcode_data_join</span>(<span class="at">.data =</span> postcodes<span class="sc">$</span>value) <span class="sc">|&gt;</span> </span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(postcode,</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>         lsoa_code) <span class="sc">|&gt;</span> </span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(NHSRpopulation<span class="sc">::</span>imd <span class="sc">|&gt;</span> </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(lsoa_code,</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>                     imd_score,</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>                     imd_decile), <span class="fu">join_by</span>(lsoa_code <span class="sc">==</span> lsoa_code)) <span class="sc">|&gt;</span> </span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">imd_decile_local =</span> <span class="fu">ntile</span>(<span class="sc">-</span>imd_score, <span class="at">n =</span> <span class="dv">10</span>)) <span class="co"># creating new deciles from the data provided</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PostcodesioR)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHSRpostcodetools) <span class="co"># installed from GitHub not CRAN</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(NHSRpopulation)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random example postcodes</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>postcodes <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_chr</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">.f =</span> <span class="sc">~</span>PostcodesioR<span class="sc">::</span><span class="fu">random_postcode</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    purrr<span class="sc">::</span><span class="fu">pluck</span>(<span class="dv">1</span>) </span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>pc_imd <span class="ot">&lt;-</span> NHSRpostcodetools<span class="sc">::</span><span class="fu">postcode_data_join</span>(<span class="at">.data =</span> postcodes<span class="sc">$</span>value) <span class="sc">|&gt;</span> </span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(postcode,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>         lsoa_code) <span class="sc">|&gt;</span> </span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(NHSRpopulation<span class="sc">::</span>imd <span class="sc">|&gt;</span> </span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>              <span class="fu">select</span>(lsoa_code,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>                     imd_score,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>                     imd_decile), <span class="fu">join_by</span>(lsoa_code <span class="sc">==</span> lsoa_code)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">imd_decile_local =</span> <span class="fu">ntile</span>(<span class="sc">-</span>imd_score, <span class="at">n =</span> <span class="dv">10</span>)) <span class="co"># creating new deciles from the data provided</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="other-useful-links" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Other useful links</h1>
-<p><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf</a></p>
-<p><a href="https://fingertips.phe.org.uk/search/imd">https://fingertips.phe.org.uk/search/imd</a></p>
-<p><a href="http://dclgapps.communities.gov.uk/imd/idmap.html">http://dclgapps.communities.gov.uk/imd/idmap.html</a></p>
-<p>Technical report for 2019: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf</a></p>
+<p><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf" class="uri">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf</a></p>
+<p><a href="https://fingertips.phe.org.uk/search/imd" class="uri">https://fingertips.phe.org.uk/search/imd</a></p>
+<p><a href="http://dclgapps.communities.gov.uk/imd/idmap.html" class="uri">http://dclgapps.communities.gov.uk/imd/idmap.html</a></p>
+<p>Technical report for 2019: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf" class="uri">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf</a></p>
 </section>
 <section id="referencing-imd-in-a-paper-or-research" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> Referencing IMD in a paper or research</h1>
 <section id="suggested-citation-text" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="suggested-citation-text"><span class="header-section-number">11.1</span> Suggested citation text</h2>
-<p>Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019</a> (Accessed 22 January 2022)</p>
+<p>Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" class="uri">https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019</a> (Accessed 22 January 2022)</p>
 
 
 </section>
