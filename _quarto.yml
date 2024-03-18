@@ -22,6 +22,7 @@ book:
     - intro.qmd
     - background_literature.qmd
     - data_sources.qmd
+    - nhs-number.qmd
     - imd.qmd
     - idd-aut.qmd
     - mapping.qmd
