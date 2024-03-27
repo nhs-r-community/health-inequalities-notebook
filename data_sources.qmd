@@ -19,3 +19,7 @@ title: "Data Sources"
 ### Health Inequalities Improvement Programme Dashboard (getting access)
 (NHS England)  
 [Health Inequalities Improvement Programme Dashboard (getting access)](https://future.nhs.uk/connect.ti/InequalitiesImprovement/view?objectID=42240816){target="_blank"}  
+
+### SHAPE Tool
+(Department of Health and Social Care)
+[SHAPE](https://app.shapeatlas.net/place){target="_blank"}  
