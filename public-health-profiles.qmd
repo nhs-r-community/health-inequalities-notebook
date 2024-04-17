@@ -39,3 +39,11 @@ and Python:
 ### Examples of visualisations
 
 Examples of visualisations that use Public Health data can be found at [Trafford Data Lab](https://www.trafforddatalab.io/) with code open on [GitHub](https://github.com/traffordDataLab). 
+
+### Webinars/Workshops
+
+[An introduction to Public Health England's packages, fingertipsR and fingertipscharts](https://www.youtube.com/watch?v=veJlBNoK1zA)
+
+[Building R packages for your analytical pipeline](https://www.youtube.com/watch?v=YjUPgHuw53E) - using fingertipsR, PHEindicatormethods, fingertipscharts and phecharts.
+
+[Using R to automate the generation of performance matrixes from Fingertips](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=14727s)
