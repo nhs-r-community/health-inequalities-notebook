@@ -1,0 +1,49 @@
+---
+title: "Public health profiles"
+---
+
+# Profiles for England and Wales
+
+Commonly referred to as Fingertips Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/).
+
+This is also available through APIs in R (not through CRAN):
+
+[{fingertipsR}](https://github.com/ropensci/fingertipsR)
+
+### R code to install
+
+{remotes} is a package that is needed to install from GitHub so is commented out as it's installed once:
+
+```{r}
+# install.packages("remotes") 
+remotes::install_github("rOpenSci/fingertipsR",
+                        build_vignettes = TRUE,
+                        dependencies = "suggests")
+```
+
+Note that the example code in the README for this package is base R so may not looks and works different to {tidyverse} coding. 
+Base R and {tidyverse} do work together though and some code may mix the two approaches to coding.
+
+and Python:
+
+[fingertips_py](https://fingertips-py.readthedocs.io/en/latest/)
+
+## Charts
+
+### R packages
+
+- [{fingertipscharts}](https://github.com/ukhsa-collaboration/fingertipscharts) helps users to easily reproduce charts from Fingertips data.
+- [{PHEindicatormethods}](https://github.com/ukhsa-collaboration/PHEindicatormethods) supports execution of statistical methods approved for use in the production of PHE indicators such as those presented via Fingertips.
+- [{FunnelPlotR}](https://github.com/nhs-r-community/FunnelPlotR) - produces funnel plots with adjustments for over dispersion methods.
+
+### Examples of visualisations
+
+Examples of visualisations that use Public Health data can be found at [Trafford Data Lab](https://www.trafforddatalab.io/) with code open on [GitHub](https://github.com/traffordDataLab). 
+
+### Webinars/Workshops
+
+[An introduction to Public Health England's packages, fingertipsR and fingertipscharts](https://www.youtube.com/watch?v=veJlBNoK1zA)
+
+[Building R packages for your analytical pipeline](https://www.youtube.com/watch?v=YjUPgHuw53E) - using fingertipsR, PHEindicatormethods, fingertipscharts and phecharts.
+
+[Using R to automate the generation of performance matrixes from Fingertips](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=14727s)
