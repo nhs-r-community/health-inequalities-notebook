@@ -14,6 +14,8 @@ Imports:
     PostcodesioR,
     rmarkdown,
     tidyverse
+Depends: 
+    R (>= 2.10)
 Encoding: UTF-8
 Remotes: 
     nhs-r-community/NHSRpostcodetools
