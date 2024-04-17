@@ -43,8 +43,8 @@ jobs:
            any::remotes
       - name: Install packages
           run:
-           remotes::install_github("nhs-r-community/NHSRpopulation")
-           remotes::install_github("nhs-r-community/NHSRpostcodetools")
+           install_github("nhs-r-community/NHSRpopulation")
+           install_github("nhs-r-community/NHSRpostcodetools")
     
       - name: Checkout
         uses: actions/checkout@v4
