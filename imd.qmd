@@ -181,7 +181,6 @@ To apply a rank use the windows partition function `ROW_NUMBER() OVER(ORDER BY I
 
 ```{r}
 #| label: localRank
-#| eval: false
 
 library(tidyverse)
 library(PostcodesioR)
