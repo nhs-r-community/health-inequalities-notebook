@@ -1,0 +1,20 @@
+Package: health-inequalities-notebook
+Type: Book
+Title: Health Inequalities Notebook
+Version: 0.1
+Authors@R: 
+    person("NHS-R", "Community", , "nhs.rcommunity@nhs.net", role = c("aut", "cre"))
+Description: This is not a package, but like https://github.com/hadley/r-pkgs/blob/main/DESCRIPTION use this file to declare
+    the dependencies of the site.
+URL: health-inequalities-notebook
+Imports:
+    gt,
+    knitr,
+    PHEindicatormethods,
+    PostcodesioR,
+    rmarkdown,
+    tidyverse
+Encoding: UTF-8
+Remotes: 
+    nhs-r-community/NHSRpostcodetools
+    nhs-r-community/NHSRpopulation

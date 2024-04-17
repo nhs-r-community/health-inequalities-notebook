@@ -32,20 +32,7 @@ jobs:
     steps:
       - name: Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-         packages:
-           any::knitr
-           any::rmarkdown
-           any::gt
-           any::PHEindicatormethods
-           any::tidyverse
-           any::PostcodesioR
-           any::remotes
-      - name: Install packages
-          run:
-           install_github("nhs-r-community/NHSRpopulation")
-           install_github("nhs-r-community/NHSRpostcodetools")
-    
+
       - name: Checkout
         uses: actions/checkout@v4
 
