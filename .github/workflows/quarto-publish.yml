@@ -30,6 +30,16 @@ jobs:
     container:
       image: ghcr.io/dukestatsci/r_gh_actions:latest
     steps:
+      - name: Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+         packages:
+           any::knitr
+           any::rmarkdown
+           any::gt
+           any::PHEindicatormethods
+           any::tidyverse
+    
       - name: Checkout
         uses: actions/checkout@v4
 
