@@ -69,7 +69,57 @@ LEFT JOIN DIM_AI.IMD AS i ON pc.PC.LSOA11 = i.LSOAcode2011
 
 # Creating quintiles
 
-To be able to join to the data scores will need to be put into quintiles (group of 5) rather than deciles (group of 10).
+To be able to join to the data scores will need to be put into quintiles (group of 5) rather than deciles (group of 10). Where the number of areas divides into the number of quintiles an equal number of areas can be assigned to each quintile. When it does not divide however, a choice must be made as to which quintiles should have a larger number of areas. The Office of Health Improvement & Disparities recommends using the following approach in their [Technical Guide to Assigning Deprivation Categories](https://fingertips.phe.org.uk/documents/OHID%20Guidance%20-%20Assigning%20Deprivation%20Categories.pdf):
+
+-   Divide the number of small areas within the higher geography by the number of deprivation categories required (up to a maximum of 10), giving an integer and fractional part.
+
+-   The integer-part of this number represents the minimum number of small areas that will be assigned to each deprivation category within each higher geography.
+
+-   The below tables then shows which deprivation categories should be assigned additional small areas based on the fractional part of this number and the number of quintiles being used.
+
+```{r}
+#| echo: false
+#| tbl-subcap: 
+#|     - "Deciles"
+#|     - "Quintiles"
+#|     - "Quartiles"
+#| layout-ncol: 3
+
+library(gt)
+
+# decile
+
+data.frame("Number after decimal point"	=
+             c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8),
+           "Deciles receiving an extra area" = 
+             c("None","1","1, 6","1, 4, 7","1, 3, 6, 8",
+               "1, 3, 5, 7, 9","1, 2, 4, 6, 7, 9",
+               "1, 2, 3, 5, 6, 8, 9","1, 2, 3, 4, 6, 7, 8, 9"),
+              check.names = F) |>
+  gt() |>
+  tab_header(title = md("Deciles"))
+
+# quintile
+
+data.frame("Number after decimal point"	=
+             c(0,0.2,0.4,0.6,0.8),
+           "Quintiles receiving an extra area" =
+             c("None","1","1, 3","1, 2, 4","1, 2, 3, 4"),
+           check.names = F) |>
+  gt() |>
+  tab_header(title = md("Quintiles"))
+
+# quantile
+
+gt(data.frame("Number after decimal point"	=
+                c(0,0.25,0.5,0.75),
+              "Quantiles receiving an extra area" =
+                c("None","1","1, 3","1, 2, 3"),
+              check.names = F)) |>
+  gt() |>
+  tab_header(title = md("Quantiles"))
+
+```
 
 ### Quintiles in SQL
 
@@ -84,32 +134,28 @@ ORDER BY IMDDecile
 
 ### Quintiles in R
 
+The `PHEindicatormethods` provides a convenient function that can be used in R to generate quintiles.
+
 ```{r}
 #| label: load-packages
 #| include: false
 
 library(tidyverse)
+library(PHEindicatormethods)
 ```
 
 ```{r }
 #| label: r-quintile
 
-# Generate a dataset
-data <- structure(list(IMDDecile = c(
-  0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L,
-  8L, 9L, 10L, NA
-)), row.names = c(NA, -12L), class = c(
-  "tbl_df",
-  "tbl", "data.frame"
-))
+df <- data.frame(
+  region = as.character(rep(c("Region1","Region2","Region3","Region4"),
+                               each=250)),
+  smallarea = as.character(paste0("Area",seq_along(1:1000))),
+  vals = as.numeric(sample(200, 1000, replace = TRUE)),
+  stringsAsFactors = FALSE)
 
-# Make the 0 generated into NA
-data |>
-  replace_na(list(IMDDecile = 0)) |>
-  mutate(
-    IMDQuintile = floor((IMDDecile - 1) / 2) + 1,
-    IMDQuintile = as.character(IMDQuintile)
-  )
+# assign small areas to deciles across whole data frame
+PHEindicatormethods::phe_quantile(df, vals, type = "standard")
 ```
 
 # Creating local IMDs
