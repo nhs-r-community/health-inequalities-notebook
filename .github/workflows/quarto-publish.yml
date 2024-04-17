@@ -40,8 +40,8 @@ jobs:
            any::PHEindicatormethods
            any::tidyverse
            any::PostcodesioR
-           any::nhs-r-community/NHSRpopulation@main
-           any::nhs-r-community/NHSRpostcodetools~main
+           uses::nhs-r-community/NHSRpopulation@main
+           uses::nhs-r-community/NHSRpostcodetools~main
     
       - name: Checkout
         uses: actions/checkout@v4
