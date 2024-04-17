@@ -40,8 +40,11 @@ jobs:
            any::PHEindicatormethods
            any::tidyverse
            any::PostcodesioR
-           uses::nhs-r-community/NHSRpopulation@main
-           uses::nhs-r-community/NHSRpostcodetools~main
+           any::remotes
+      - name: Install packages
+          run:
+           remotes::install_github("nhs-r-community/NHSRpopulation")
+           remotes::install_github("nhs-r-community/NHSRpostcodetools")
     
       - name: Checkout
         uses: actions/checkout@v4
