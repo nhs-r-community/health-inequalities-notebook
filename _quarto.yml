@@ -23,6 +23,7 @@ book:
     - background_literature.qmd
     - nhs-number.qmd
     - data_sources.qmd
+    - public-health-profiles.qmd
     - imd.qmd
     - idd-aut.qmd
     - mapping.qmd

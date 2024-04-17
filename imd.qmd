@@ -15,11 +15,11 @@ IMD is very useful for categorising the area a person lives in for deprivation. 
 
 To get IMD scores or deciles for a local data a join will be needed to the postcode table (like a directory of postcodes) found:
 
-[https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files](https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files)
+<https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files>
 
 and then to the IMD data:
 
-[https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
+<https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019>
 
 -   Select File 7 for the dataset.
 
@@ -114,8 +114,7 @@ data |>
 
 # Creating local IMDs
 
-In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. 
-It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. 
+In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD.
 
 ## Local IMD creation in SQL
 
@@ -161,28 +160,20 @@ NHSRpopulation::get_data(tibble_postcodes,
 
 ## LSOAs - by postcode and by Local Authority/District
 
-Note that the previous code example was a very small selection of  
+Note that the previous code example was a very small selection of\
 postcodes and would require much more data to create locally derived deciles.
 
-This usually comes from whole LSOA areas that are linked to Local Authorities/
-Districts and not via row level data postcodes.
+This usually comes from whole LSOA areas that are linked to Local Authorities/ Districts and not via row level data postcodes.
 
-For example, Nottinghamshire Healthcare NHS Foundation Trust covers several 
-Local Authority areas in its services and so organisations like this have to 
-find all the geographic areas that the services cover.
+For example, Nottinghamshire Healthcare NHS Foundation Trust covers several Local Authority areas in its services and so organisations like this have to find all the geographic areas that the services cover.
 
-:::{.callout-warning collapse=false appearance='default' icon=true}
+::: {.callout-warning collapse="false" appearance="default" icon="true"}
 ## Local Authority and District LSOAs are not in {NHSRpostcodetools} (warning)
-Currently (March 2024) the package {NHSRpopulation} which relies upon package
-for postcodes {NHSRpostcodetools} and a join to the IMD data via LSOAs does not
-have details for Local Authority LSOAs. 
+
+Currently (March 2024) the package {NHSRpopulation} which relies upon package for postcodes {NHSRpostcodetools} and a join to the IMD data via LSOAs does not have details for Local Authority LSOAs.
 :::
 
-There are two local authorities in the service area of Nottinghamshire Healthcare
-NHS Foundation Trust: Nottingham City Local Authority and several 
-Nottinghamshire County Council LA areas.
-# often have their data combined, particularly for the Provider
-# Trusts like Nottinghamshire Healthcare NHS Foundation Trust.
+There are two local authorities in the service area of Nottinghamshire Healthcare NHS Foundation Trust: Nottingham City Local Authority and several Nottinghamshire County Council LA areas. \# often have their data combined, particularly for the Provider \# Trusts like Nottinghamshire Healthcare NHS Foundation Trust.
 
 ```{r define-las}
 # Define code for Nottingham City LA
@@ -209,16 +200,18 @@ la_code_nott_city_notts_county
 
 # Other useful links
 
-[https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
+<https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf>
 
-[https://fingertips.phe.org.uk/search/imd](https://fingertips.phe.org.uk/search/imd)
+<https://fingertips.phe.org.uk/search/imd>
 
-[http://dclgapps.communities.gov.uk/imd/idmap.html](http://dclgapps.communities.gov.uk/imd/idmap.html)
+<http://dclgapps.communities.gov.uk/imd/idmap.html>
 
-Technical report for 2019: [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf)
+Technical report for 2019: <https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf>
+
+Example Shiny app from [Trafford Data Lab](https://trafforddatalab.shinyapps.io/imd19/) with published code on [GitHub](https://github.com/traffordDataLab/imd19/blob/master/app.R).
 
 # Referencing IMD in a paper or research
 
 ## Suggested citation text
 
-Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. [https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) (Accessed 22 March 2024)
+Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019> (Accessed 22 March 2024)
