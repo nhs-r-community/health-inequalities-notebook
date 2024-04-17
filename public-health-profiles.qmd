@@ -21,8 +21,7 @@ remotes::install_github("rOpenSci/fingertipsR",
                         dependencies = "suggests")
 ```
 
-Note that the example code in the README for this package is base R so may not looks and works different to {tidyverse} coding. 
-Base R and {tidyverse} do work together though and some code may mix the two approaches to coding.
+Note that the example code in the README for this package is base R so may not looks and works different to {tidyverse} coding. Base R and {tidyverse} do work together though and some code may mix the two approaches to coding.
 
 and Python:
 
@@ -32,13 +31,13 @@ and Python:
 
 ### R packages
 
-- [{fingertipscharts}](https://github.com/ukhsa-collaboration/fingertipscharts) helps users to easily reproduce charts from Fingertips data.
-- [{PHEindicatormethods}](https://github.com/ukhsa-collaboration/PHEindicatormethods) supports execution of statistical methods approved for use in the production of PHE indicators such as those presented via Fingertips.
-- [{FunnelPlotR}](https://github.com/nhs-r-community/FunnelPlotR) - produces funnel plots with adjustments for over dispersion methods.
+-   [{fingertipscharts}](https://github.com/ukhsa-collaboration/fingertipscharts) helps users to easily reproduce charts from Fingertips data.
+-   [{PHEindicatormethods}](https://github.com/ukhsa-collaboration/PHEindicatormethods) supports execution of statistical methods approved for use in the production of PHE indicators such as those presented via Fingertips.
+-   [{FunnelPlotR}](https://github.com/nhs-r-community/FunnelPlotR) - produces funnel plots with adjustments for over dispersion methods.
 
 ### Examples of visualisations
 
-Examples of visualisations that use Public Health data can be found at [Trafford Data Lab](https://www.trafforddatalab.io/) with code open on [GitHub](https://github.com/traffordDataLab). 
+Examples of visualisations that use Public Health data can be found at [Trafford Data Lab](https://www.trafforddatalab.io/) with code open on [GitHub](https://github.com/traffordDataLab).
 
 ### Webinars/Workshops
 
@@ -47,3 +46,8 @@ Examples of visualisations that use Public Health data can be found at [Trafford
 [Building R packages for your analytical pipeline](https://www.youtube.com/watch?v=YjUPgHuw53E) - using fingertipsR, PHEindicatormethods, fingertipscharts and phecharts.
 
 [Using R to automate the generation of performance matrixes from Fingertips](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=14727s)
+
+[PHINE Network meeting](https://www.youtube.com/watch?v=EQGBVbUL9zM) 
+ A worked example of how to use the `phe_dsr()` function from the {PHEindicatormethods} R package 
+- A run through some of methods you can use to load data into Power BI
+- Loading using an API connection - NOMIS
