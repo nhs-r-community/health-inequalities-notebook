@@ -30,11 +30,11 @@ jobs:
     container:
       image: ghcr.io/dukestatsci/r_gh_actions:latest
     steps:
-      - name: Dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
 
       - name: Build site
         run: |
