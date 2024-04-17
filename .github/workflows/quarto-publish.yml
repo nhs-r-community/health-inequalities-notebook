@@ -39,6 +39,9 @@ jobs:
            any::gt
            any::PHEindicatormethods
            any::tidyverse
+           any::PostcodesioR
+           any::nhs-r-community/NHSRpopulation@main
+           any::nhs-r-community/NHSRpostcodetools~main
     
       - name: Checkout
         uses: actions/checkout@v4
