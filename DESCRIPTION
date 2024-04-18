@@ -19,6 +19,5 @@ Imports:
 Depends: 
     R (>= 2.10)
 Encoding: UTF-8
-Remotes: 
-    nhs-r-community/NHSRpostcodetools
-    nhs-r-community/NHSRpopulation
+Remotes: nhs-r-community/NHSRpopulation,
+  nhs-r-community/NHSRpostcodetools
