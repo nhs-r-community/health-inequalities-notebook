@@ -17,7 +17,7 @@ Imports:
     rmarkdown,
     tidyverse
 Depends: 
-    R (>= 2.10)
+    R (>= 4.3.3)
 Encoding: UTF-8
 Remotes: nhs-r-community/NHSRpopulation,
   nhs-r-community/NHSRpostcodetools
