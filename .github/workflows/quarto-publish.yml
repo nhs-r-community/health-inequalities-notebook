@@ -27,11 +27,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    check-renders:
-      env:
-        GITHUB_PAT: ${{ secrets.GH_PAT }}
-    container:
-      image: ghcr.io/dukestatsci/r_gh_actions:latest
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       
