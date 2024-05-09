@@ -32,9 +32,6 @@ book:
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
   repo-actions: [edit, issue]
-    
-
-bibliography: references.bib
 
 format:
   html:
