@@ -28,9 +28,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/dukestatsci/r_gh_actions:latest
+      image: ghcr.io/nhs-r-community/r_gh_actions:latest
     steps:
       - uses: actions/checkout@v4
+      
+      - uses: actions/cache@v4
+        with:
+          key: packages
+          path: /usr/local/lib/R/site-library
       
       - name: Install Missing Packages
         run: |
@@ -51,7 +56,6 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-        
       - name: Build site
         run: |
           quarto render
