@@ -28,7 +28,6 @@ book:
     - imd.qmd
     - idd-aut.qmd
     - mapping.qmd
-    - references.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
