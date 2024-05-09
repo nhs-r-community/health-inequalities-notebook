@@ -1,7 +1,3 @@
----
-title: "Public health profiles"
----
-
 # Profiles for England and Wales
 
 Commonly referred to as Fingertips Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/).
