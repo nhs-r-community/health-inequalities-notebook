@@ -6,6 +6,16 @@ title: "Index of Multiple Deprivation (IMD)"
 
 The latest available IMD data for England is from 2019.
 
+:::{.callout-important collapse=false appearance='default' icon=true}
+## Updated IMD for England
+This is expected to be released in late 2025 by [Oxford Consultants for Social Inclusion (OCSI)](https://ocsi.uk/2023/07/10/we-are-updating-the-english-indices-of-deprivation/).
+
+The consultation outcome was released in 2022 by the [Department for Levelling up, Housing & Communities](https://www.gov.uk/government/consultations/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation/outcome/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation-government-reponse)
+
+Thanks to the NHS-R Community for finding and sharing these links on the NHS-R Slack
+:::
+
+
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
 [Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)\
