@@ -24,3 +24,17 @@
 ### SHAPE Tool
 
 (Department of Health and Social Care) [SHAPE](https://app.shapeatlas.net/place){target="_blank"}
+
+## Code lists
+
+Mental Health from Health Foundation's [Network Data Labs](https://github.com/HFAnalyticsLab/Mental-health-code-lists)
+
+Includes code lists for
+
+- Depression
+- Anxiety
+- Self harm
+- Eating disorders
+- Alcohol misuse
+- Substance misuse
+- Severe mental illness
