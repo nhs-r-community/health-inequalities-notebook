@@ -279,6 +279,10 @@ Technical report for 2019: <https://assets.publishing.service.gov.uk/government/
 
 Example Shiny app from [Trafford Data Lab](https://trafforddatalab.shinyapps.io/imd19/) with published code on [GitHub](https://github.com/traffordDataLab/imd19/blob/master/app.R).
 
+[English indices of deprivation 2019: Postcode Lookup](https://imd-by-postcode.opendatacommunities.org/imd/2019) for csv uploads. 
+Do check for Information Governance when using sensitive data as, even though these should be loaded separate to other information, this may not be authorised. 
+Also this won't be considered part of a Reproducible Analytical Pipeline as this is a manual step.
+
 # Referencing IMD in a paper or research
 
 ## Suggested citation text
