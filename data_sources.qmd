@@ -38,3 +38,5 @@ Includes code lists for
 - Alcohol misuse
 - Substance misuse
 - Severe mental illness
+
+A wide range of code lists from [OpenCodelists](https://www.opencodelists.org/).
