@@ -6,6 +6,16 @@ title: "Index of Multiple Deprivation (IMD)"
 
 The latest available IMD data for England is from 2019.
 
+:::{.callout-important collapse=false appearance='default' icon=true}
+## Updated IMD for England
+This is expected to be released in late 2025 by [Oxford Consultants for Social Inclusion (OCSI)](https://ocsi.uk/2023/07/10/we-are-updating-the-english-indices-of-deprivation/).
+
+The consultation outcome was released in 2022 by the [Department for Levelling up, Housing & Communities](https://www.gov.uk/government/consultations/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation/outcome/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation-government-reponse)
+
+Thanks to the NHS-R Community for finding and sharing these links on the NHS-R Slack
+:::
+
+
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
 [Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)\
@@ -15,11 +25,11 @@ IMD is very useful for categorising the area a person lives in for deprivation. 
 
 To get IMD scores or deciles for a local data a join will be needed to the postcode table (like a directory of postcodes) found:
 
-[https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files](https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files)
+<https://digital.nhs.uk/services/organisation-data-service/data-downloads/ods-postcode-files>
 
 and then to the IMD data:
 
-[https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019)
+<https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019>
 
 -   Select File 7 for the dataset.
 
@@ -69,7 +79,64 @@ LEFT JOIN DIM_AI.IMD AS i ON pc.PC.LSOA11 = i.LSOAcode2011
 
 # Creating quintiles
 
-To be able to join to the data scores will need to be put into quintiles (group of 5) rather than deciles (group of 10).
+To be able to join to the data scores will need to be put into quintiles (group of 5) rather than deciles (group of 10). Where the number of areas divides into the number of quintiles an equal number of areas can be assigned to each quintile. When it does not divide however, a choice must be made as to which quintiles should have a larger number of areas. The Office of Health Improvement & Disparities recommends using the following approach in their [Technical Guide to Assigning Deprivation Categories](https://fingertips.phe.org.uk/documents/OHID%20Guidance%20-%20Assigning%20Deprivation%20Categories.pdf):
+
+-   Divide the number of small areas within the higher geography by the number of deprivation categories required (up to a maximum of 10), giving an integer and fractional part.
+
+-   The integer-part of this number represents the minimum number of small areas that will be assigned to each deprivation category within each higher geography.
+
+-   The below tables then shows which deprivation categories should be assigned additional small areas based on the fractional part of this number and the number of quintiles being used.
+
+```{r}
+#| echo: false
+#| tbl-subcap:
+#|     - "Deciles"
+#|     - "Quintiles"
+#|     - "Quartiles"
+#| layout-ncol: 3
+
+library(gt)
+
+# decile
+
+data.frame(
+  "Number after decimal point" =
+    c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+  "Deciles receiving an extra area" =
+    c(
+      "None", "1", "1, 6", "1, 4, 7", "1, 3, 6, 8",
+      "1, 3, 5, 7, 9", "1, 2, 4, 6, 7, 9",
+      "1, 2, 3, 5, 6, 8, 9", "1, 2, 3, 4, 6, 7, 8, 9"
+    ),
+  check.names = F
+) |>
+  gt() |>
+  tab_header(title = md("Deciles"))
+
+# quintile
+
+data.frame(
+  "Number after decimal point" =
+    c(0, 0.2, 0.4, 0.6, 0.8),
+  "Quintiles receiving an extra area" =
+    c("None", "1", "1, 3", "1, 2, 4", "1, 2, 3, 4"),
+  check.names = F
+) |>
+  gt() |>
+  tab_header(title = md("Quintiles"))
+
+# quantile
+
+data.frame(
+  "Number after decimal point" =
+    c(0, 0.25, 0.5, 0.75),
+  "Quantiles receiving an extra area" =
+    c("None", "1", "1, 3", "1, 2, 3"),
+  check.names = F
+) |>
+  gt() |>
+  tab_header(title = md("Quantiles"))
+```
 
 ### Quintiles in SQL
 
@@ -84,38 +151,37 @@ ORDER BY IMDDecile
 
 ### Quintiles in R
 
+The `PHEindicatormethods` provides a convenient function that can be used in R to generate quintiles.
+
 ```{r}
 #| label: load-packages
 #| include: false
 
 library(tidyverse)
+library(PHEindicatormethods)
 ```
 
 ```{r }
 #| label: r-quintile
 
-# Generate a dataset
-data <- structure(list(IMDDecile = c(
-  0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L,
-  8L, 9L, 10L, NA
-)), row.names = c(NA, -12L), class = c(
-  "tbl_df",
-  "tbl", "data.frame"
-))
+df <- data.frame(
+  region = as.character(rep(c("Region1", "Region2", "Region3", "Region4"),
+    each = 250
+  )),
+  smallarea = as.character(paste0("Area", seq_along(1:1000))),
+  vals = as.numeric(sample(200, 1000, replace = TRUE)),
+  stringsAsFactors = FALSE
+)
 
-# Make the 0 generated into NA
-data |>
-  replace_na(list(IMDDecile = 0)) |>
-  mutate(
-    IMDQuintile = floor((IMDDecile - 1) / 2) + 1,
-    IMDQuintile = as.character(IMDQuintile)
-  )
+# assign small areas to deciles across whole data frame
+# print the top 15
+PHEindicatormethods::phe_quantile(df, vals, type = "standard") |>
+  dplyr::slice_head(n = 15)
 ```
 
 # Creating local IMDs
 
-In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. 
-It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD. 
+In areas like Nottingham/Nottinghamshire the differences between the LSOA areas is diminished when ranked against England as a whole, but when ranked locally, the variation is much more pronounced. It is possible to take the original scores and apply deciles or quintiles to those scores in order to create a local IMD.
 
 ## Local IMD creation in SQL
 
@@ -125,7 +191,6 @@ To apply a rank use the windows partition function `ROW_NUMBER() OVER(ORDER BY I
 
 ```{r}
 #| label: localRank
-#| eval: false
 
 library(tidyverse)
 library(PostcodesioR)
@@ -148,41 +213,36 @@ tibble_postcodes <- dplyr::tibble(
   random_postcodes = postcodes,
 )
 
-NHSRpopulation::get_data(tibble_postcodes, 
-                         column = "random_postcodes", 
-                         url_type = "imd") |> 
-  dplyr::select(random_postcodes,
-                new_postcode,
-                imd_decile,
-                imd_rank,
-                imd_score) |> 
+NHSRpopulation::get_data(tibble_postcodes,
+  column = "random_postcodes",
+  url_type = "imd"
+) |>
+  dplyr::select(
+    random_postcodes,
+    new_postcode,
+    imd_decile,
+    imd_rank,
+    imd_score
+  ) |>
   mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided
 ```
 
 ## LSOAs - by postcode and by Local Authority/District
 
-Note that the previous code example was a very small selection of  
+Note that the previous code example was a very small selection of\
 postcodes and would require much more data to create locally derived deciles.
 
-This usually comes from whole LSOA areas that are linked to Local Authorities/
-Districts and not via row level data postcodes.
+This usually comes from whole LSOA areas that are linked to Local Authorities/ Districts and not via row level data postcodes.
 
-For example, Nottinghamshire Healthcare NHS Foundation Trust covers several 
-Local Authority areas in its services and so organisations like this have to 
-find all the geographic areas that the services cover.
+For example, Nottinghamshire Healthcare NHS Foundation Trust covers several Local Authority areas in its services and so organisations like this have to find all the geographic areas that the services cover.
 
-:::{.callout-warning collapse=false appearance='default' icon=true}
+::: {.callout-warning collapse="false" appearance="default" icon="true"}
 ## Local Authority and District LSOAs are not in {NHSRpostcodetools} (warning)
-Currently (March 2024) the package {NHSRpopulation} which relies upon package
-for postcodes {NHSRpostcodetools} and a join to the IMD data via LSOAs does not
-have details for Local Authority LSOAs. 
+
+Currently (March 2024) the package {NHSRpopulation} which relies upon package for postcodes {NHSRpostcodetools} and a join to the IMD data via LSOAs does not have details for Local Authority LSOAs.
 :::
 
-There are two local authorities in the service area of Nottinghamshire Healthcare
-NHS Foundation Trust: Nottingham City Local Authority and several 
-Nottinghamshire County Council LA areas.
-# often have their data combined, particularly for the Provider
-# Trusts like Nottinghamshire Healthcare NHS Foundation Trust.
+There are two local authorities in the service area of Nottinghamshire Healthcare NHS Foundation Trust: Nottingham City Local Authority and several Nottinghamshire County Council LA areas. \# often have their data combined, particularly for the Provider \# Trusts like Nottinghamshire Healthcare NHS Foundation Trust.
 
 ```{r define-las}
 # Define code for Nottingham City LA
@@ -197,28 +257,34 @@ la_code_notts_county <- tibble::tribble(
   "E01013810", "Nottingham 018A", "E06000018", "Nottingham",
   "E01013811", "Nottingham 018B", "E06000018", "Nottingham",
   "E01013815", "Nottingham 022C", "E06000018", "Nottingham"
-) |> 
-  dplyr::select(LSOAcode2011) |> 
+) |>
+  dplyr::select(LSOAcode2011) |>
   dplyr::pull()
 
 # Combine all districts into one object
 la_code_nott_city_notts_county <- c(la_code_nott_city, la_code_notts_county)
 
-la_code_nott_city_notts_county 
+la_code_nott_city_notts_county
 ```
 
 # Other useful links
 
-[https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
+<https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/464430/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf>
 
-[https://fingertips.phe.org.uk/search/imd](https://fingertips.phe.org.uk/search/imd)
+<https://fingertips.phe.org.uk/search/imd>
 
-[http://dclgapps.communities.gov.uk/imd/idmap.html](http://dclgapps.communities.gov.uk/imd/idmap.html)
+<http://dclgapps.communities.gov.uk/imd/idmap.html>
 
-Technical report for 2019: [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf)
+Technical report for 2019: <https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/833951/IoD2019_Technical_Report.pdf>
+
+Example Shiny app from [Trafford Data Lab](https://trafforddatalab.shinyapps.io/imd19/) with published code on [GitHub](https://github.com/traffordDataLab/imd19/blob/master/app.R).
+
+[English indices of deprivation 2019: Postcode Lookup](https://imd-by-postcode.opendatacommunities.org/imd/2019) for csv uploads. 
+Do check for Information Governance when using sensitive data as, even though these should be loaded separate to other information, this may not be authorised. 
+Also this won't be considered part of a Reproducible Analytical Pipeline as this is a manual step.
 
 # Referencing IMD in a paper or research
 
 ## Suggested citation text
 
-Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. [https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) (Accessed 22 March 2024)
+Ministry of Housing, Communities and Local Government. English Indices of Deprivation 2015. <https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019> (Accessed 22 March 2024)

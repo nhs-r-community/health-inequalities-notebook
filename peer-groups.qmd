@@ -1,0 +1,13 @@
+# Peer groups/Nearest Neighbour
+
+Comparing areas is a common analytical process but sometimes involve comparing geographically neighbouring areas which are not similar in population or demographics amongst other factors. As a consequence of this CIPFA created a [Nearest Neighbour Model (England)](https://www.cipfa.org/services/cipfastats/nearest-neighbour-model) for Local Authorities:
+
+> Featuring 40 metrics using a wide range of social‐economic indicators, the tool is designed to help you to interpret results and deep dive into how the statistical distance between other authorities arises, enabling you to see how the statistical relationship between you and your neighbours has changed.
+
+Following local government boundary changes to local authority in 2023 this model is being updated and, as of May 2024 tools like the Office for Health Improvement and Disparities [Fingertips](https://fingertips.phe.org.uk/) moved to use the NHS England local authority peer groups for statistical neighbour comparisons.
+
+These calculations are generated using Python with the code is shared through the [ASC_LA_Peer_Groups](https://github.com/NHSDigital/ASC_LA_Peer_Groups) repository. They are calculated by:
+
+> a metric of similarity (Euclidean distance) based on standardised, normalised input features from Census 2021 data, including population demographics such as age, ethnicity and educational attainment.
+
+The repository, although relying upon Python is useful in detailing the csv files and their locations that are used to build this calculation.

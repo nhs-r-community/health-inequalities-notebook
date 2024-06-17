@@ -12,6 +12,6 @@ It is supported and enabled by:
 
 -   [The Midlands and Lancashire Commissioning Support Unit](https://www.midlandsandlancashirecsu.nhs.uk/)
 
-It is written using the [Quarto](https://quarto.org/) technical publishing system, currently v1.3.450.
+It is written using the [Quarto](https://quarto.org/) technical publishing system.
 
-If you would like to contribute or otherwise get involved in the project, please raise an issue on [GitHub](https://github.com/nhs-r-community/health-inequalities-notebook/issues), or make contact in the NHS-R Slack group.
+If you would like to contribute or otherwise get involved in the project, please raise an issue on [GitHub](https://github.com/nhs-r-community/health-inequalities-notebook/issues), or make contact in the [NHS-R Slack group](https://nhsrcommunity.slack.com/).
