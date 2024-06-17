@@ -1,0 +1,39 @@
+---
+title: "Sex/Gender"
+---
+
+[NHS Digital](https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets/mental-health-services-data-set/submit-data/data-quality-of-protected-characteristics-and-other-vulnerable-groups/gender-identity) describes gender in the following way:
+
+Gender identity is a way to describe a person's innate sense of their own gender, whether male, female, or non-binary, which may not correspond to the sex registered at birth. [Gender identity should not be confused with registered sex at birth, or with sexuality or who someone is attracted to.](https://www.nspcc.org.uk/keeping-children-safe/sex-relationships/gender-identity/)
+
+The nuance in definitions between sex and gender have only relatively recently led to changes in how NHS data are stored. The terms 'gender' and 'sex' were used interchangeably until recently.
+
+## Gender Identity Code
+
+The 'gold-standard' for gender information is to allow the patient to self-identify, using the ['gender identity code'](https://www.datadictionary.nhs.uk/attributes/gender_identity_code.html?hl=gender%2Cidentity%2Ccode), which provides for options;
+
+1.  Male
+2.  Female
+3.  Non-binary
+4.  Other (not listed)
+
+<!-- -->
+
+X.  Not known
+Y.  Not stated (person asked but declined to provide a response)
+
+This data item may not match what is held in other NHS datasets, including the NHS Spine. It is not to be overwritten by other sources.
+
+## Gender Identity Same at Birth Indicator
+
+[This data item](https://www.datadictionary.nhs.uk/attributes/gender_identity_same_at_birth_indicator.html) is completed with reference to the patient's self-reported gender identity information, and not through linkage to the Spine. The possible options for this data item are Yes, No or Not stated. This item may identify transgender patients, and therefore must be used with caution.
+
+## Transgender patients
+
+For people whose gender does not match their sex as registered at birth, one option to legally transition to the opposite sex is to apply for a Gender Recognition Certificate (GRC). 'Gender reassignment' is a protected characteristic under the Equality Act (2010), and applies to anyone who is at any stage of transition.
+
+Transgender patients often face [additional health challenges and differences in care](https://www.kingsfund.org.uk/insight-and-analysis/blogs/ensuring-nhs-meets-needs-trans-people) compared to cis-gender patients. To aid understanding of how these differences manifest across the health service, accurate data are needed. However, identifying transgender patients has been largely impossible until recently, and is a sensitive area, since patient safety and privacy are paramount. Transgender patients are a small group, and there are issues of legality around how information like the above can be used and reported on.
+
+## Analysis using sex/gender
+
+For analyses that make use of patient sex or gender information, the most appropriate variable to use will depend on the purpose of the work. Further information can be found [here](https://service-manual.nhs.uk/content/inclusive-content/sex-gender-and-sexuality).
