@@ -24,6 +24,7 @@ book:
     - nhs-number.qmd
     - data_sources.qmd
     - imd.qmd
+    - gender.qmd
     - idd-aut.qmd
     - mapping.qmd
     - references.qmd
