@@ -26,6 +26,7 @@ book:
     - data_sources.qmd
     - public-health-profiles.qmd
     - imd.qmd
+    - gender.qmd
     - idd-aut.qmd
     - mapping.qmd
     
