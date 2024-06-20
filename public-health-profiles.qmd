@@ -1,6 +1,6 @@
-# Profiles for England and Wales
+# Public Health Profiles (England and Wales)
 
-Commonly referred to as Fingertips Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/).
+Commonly referred to as `Fingertips`, Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/).
 
 This is also available through APIs in R (not through CRAN):
 
@@ -45,7 +45,4 @@ Examples of visualisations that use Public Health data can be found at [Trafford
 
 [Using R to automate the generation of performance matrixes from Fingertips](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=14727s)
 
-[PHINE Network meeting](https://www.youtube.com/watch?v=EQGBVbUL9zM) 
- A worked example of how to use the `phe_dsr()` function from the {PHEindicatormethods} R package 
-- A run through some of methods you can use to load data into Power BI
-- Loading using an API connection - NOMIS
+[PHINE Network meeting](https://www.youtube.com/watch?v=EQGBVbUL9zM) A worked example of how to use the `phe_dsr()` function from the {PHEindicatormethods} R package - A run through some of methods you can use to load data into Power BI - Loading using an API connection - NOMIS
