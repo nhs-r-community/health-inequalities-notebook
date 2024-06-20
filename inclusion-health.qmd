@@ -1,0 +1,44 @@
+---
+title: "Inclusion Health"
+---
+
+> Inclusion health is an umbrella term used to describe people who are socially excluded, who typically experience multiple interacting risk factors for poor health, such as stigma, discrimination, poverty, violence, and complex trauma.
+
+[NHS England National Framework for NHS action on inclusion health](https://www.england.nhs.uk/long-read/a-national-framework-for-nhs-action-on-inclusion-health/)
+
+Finding these groups in data can be particularly difficult.
+Groups include:
+
+- People who experience homelessness
+- People with drug and alcohol dependence
+- Vulnerable migrants and refugees
+- Gypsy, Roma, and Traveller communities
+- People in contact with the justice system
+- Victims of modern slavery
+- Sex workers
+- Other marginalised groups
+
+## Postcodes 
+
+### England
+
+Homelessness and no fixed abode have implications for commissioning under usual place of residence but also for health inequality analysis.
+The guidance for [commissioner assignment](https://www.england.nhs.uk/long-read/commissioner-assignment-method-flow-chart-2024-25-accompanying-guidance-and-reference-tables/) can help understand how data has been entered and what that intention was, for example, postcodes may be from the main site of the provider delivering care.
+Although the guidance says to use `ZZ99 3VZ` for `No Fixed Abode` but it may be that the data was added without this knowledge or from before the guidance and is still applicable.
+
+`Address not known` should be `ZZ99 3WZ`.
+
+Note that some `ZZ` postcodes will related to unspecified UK country codes:
+
+- `England UK – not specified` - `Z99 3CZ`  
+- `Wales` - `ZZ99 3GZ`  
+- `Scotland` - `ZZ99 1WZ`  
+- `Northern Ireland` - `ZZ99 2WZ`
+
+### Scotland
+
+According to [NHS Tayside](https://www.nhstaysidecdn.scot.nhs.uk/NHSTaysideWeb/idcplg?IdcService=GET_SECURE_FILE&dDocName=PROD_315642&Rendition=web&RevisionSelectionMethod=LatestReleased&noSaveAs=1#) if a person has no fixed address it is classified as `NF1 1AB`.
+
+### Wales
+
+The [Data dictionary](https://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/postcode.htm) is distinct for NHS Wales.

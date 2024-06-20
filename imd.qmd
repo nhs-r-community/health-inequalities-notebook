@@ -2,19 +2,17 @@
 title: "Index of Multiple Deprivation (IMD)"
 ---
 
-# Index of Multiple Deprivation
-
 The latest available IMD data for England is from 2019.
 
-:::{.callout-important collapse=false appearance='default' icon=true}
+::: {.callout-important collapse="false" appearance="default" icon="true"}
 ## Updated IMD for England
+
 This is expected to be released in late 2025 by [Oxford Consultants for Social Inclusion (OCSI)](https://ocsi.uk/2023/07/10/we-are-updating-the-english-indices-of-deprivation/).
 
 The consultation outcome was released in 2022 by the [Department for Levelling up, Housing & Communities](https://www.gov.uk/government/consultations/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation/outcome/indices-futures-updating-the-english-indices-of-deprivation-iod-consultation-government-reponse)
 
 Thanks to the NHS-R Community for finding and sharing these links on the NHS-R Slack
 :::
-
 
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
@@ -279,9 +277,7 @@ Technical report for 2019: <https://assets.publishing.service.gov.uk/government/
 
 Example Shiny app from [Trafford Data Lab](https://trafforddatalab.shinyapps.io/imd19/) with published code on [GitHub](https://github.com/traffordDataLab/imd19/blob/master/app.R).
 
-[English indices of deprivation 2019: Postcode Lookup](https://imd-by-postcode.opendatacommunities.org/imd/2019) for csv uploads. 
-Do check for Information Governance when using sensitive data as, even though these should be loaded separate to other information, this may not be authorised. 
-Also this won't be considered part of a Reproducible Analytical Pipeline as this is a manual step.
+[English indices of deprivation 2019: Postcode Lookup](https://imd-by-postcode.opendatacommunities.org/imd/2019) for csv uploads. Do check for Information Governance when using sensitive data as, even though these should be loaded separate to other information, this may not be authorised. Also this won't be considered part of a Reproducible Analytical Pipeline as this is a manual step.
 
 # Referencing IMD in a paper or research
 
