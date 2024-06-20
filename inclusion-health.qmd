@@ -44,9 +44,11 @@ According to [NHS Tayside](https://www.nhstaysidecdn.scot.nhs.uk/NHSTaysideWeb/i
 
 The [Data dictionary](https://www.datadictionary.wales.nhs.uk/index.html#!WordDocuments/postcode.htm) is distinct for NHS Wales.
 
-## Webinars and datapacks
+## Public Health / Office for Health Improvement and Disparities
 
-South East Clinical Delivery and Networks[webinars 2023-2024](https://www.southeastclinicalnetworks.nhs.uk/homelessness-and-rough-sleeping-webinars-2023-24/)
+South East Clinical Delivery and Networks[webinars 2023-2024](https://www.southeastclinicalnetworks.nhs.uk/homelessness-and-rough-sleeping-webinars-2023-24/) and datapacks.
+
+[Spotlight tool](https://analytics.phe.gov.uk/apps/spotlight/) collates and presents key statistics related to the public health outcomes of Inclusion health groups across the following themes: access to and utilisation of health care; preventative care; health outcomes; and wider determinants of health.
 
 ## Networks
 
