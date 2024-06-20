@@ -41,8 +41,24 @@ Examples of visualisations that use Public Health data can be found at [Trafford
 
 [An introduction to Public Health England's packages, fingertipsR and fingertipscharts](https://www.youtube.com/watch?v=veJlBNoK1zA)
 
-[Building R packages for your analytical pipeline](https://www.youtube.com/watch?v=YjUPgHuw53E) - using fingertipsR, PHEindicatormethods, fingertipscharts and phecharts.
+[Building R packages for your analytical pipeline](https://www.youtube.com/watch?v=YjUPgHuw53E) - using {fingertipsR}, {PHEindicatormethods}, {fingertipscharts} and {phecharts}.
 
 [Using R to automate the generation of performance matrixes from Fingertips](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=14727s)
 
 [PHINE Network meeting](https://www.youtube.com/watch?v=EQGBVbUL9zM) A worked example of how to use the `phe_dsr()` function from the {PHEindicatormethods} R package - A run through some of methods you can use to load data into Power BI - Loading using an API connection - NOMIS
+
+## Technical Briefings
+
+Technical briefings from Apho (Association of Public Health Observatories) are available as downloadable pdfs which [Scotland Public Health Observatory](https://www.scotpho.org.uk/methods-and-data/methodology/) have compiled in one page along with their published guidance.
+
+Methodology covered includes:
+
+- Standardisation
+- Confidence Intervals
+- Process Control charts
+- Health Inequalities
+- Life expectancy and healthy life expectancy
+- Developing indicators
+- Target setting
+- Health Inequalities Impact Assessment
+- Small area modelled (or synthetic) estimates
