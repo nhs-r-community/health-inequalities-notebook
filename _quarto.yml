@@ -21,13 +21,14 @@ book:
     - index.qmd
     - intro.qmd
     - background_literature.qmd
+    - data_sources.qmd
+    - idd-aut.qmd
+    - imd.qmd
+    - inclusion-health.qmd
+    - mapping.qmd
     - nhs-number.qmd
     - peer-groups.qmd
-    - data_sources.qmd
     - public-health-profiles.qmd
-    - imd.qmd
-    - idd-aut.qmd
-    - mapping.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
