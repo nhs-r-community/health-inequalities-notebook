@@ -49,3 +49,5 @@ A wide range of code lists from [OpenCodelists](https://www.opencodelists.org/).
 
 Useful blog detailing some incorrect assumptions on UK addresses and postcodes:
 <https://www.mjt.me.uk/posts/falsehoods-programmers-believe-about-addresses/>
+
+UK Address Oddities: <https://paulplowman.com/stuff/uk-address-oddities/>
