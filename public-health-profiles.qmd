@@ -6,6 +6,8 @@ This is also available through APIs in R (not through CRAN):
 
 [{fingertipsR}](https://github.com/ropensci/fingertipsR)
 
+[Static Reports](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/about.html) including life expectancy, best start in life, smoking, obesity, alcohol, cardiovascular disease, respiratory disease, cancer, mulsculoskeletal health, mental health and wellbeing and wider determinants of health.
+
 ### R code to install
 
 {remotes} is a package that is needed to install from GitHub so is commented out as it's installed once:
