@@ -211,18 +211,19 @@ tibble_postcodes <- dplyr::tibble(
   random_postcodes = postcodes,
 )
 
-NHSRpopulation::get_data(tibble_postcodes,
-  column = "random_postcodes",
-  url_type = "imd"
-) |>
-  dplyr::select(
-    random_postcodes,
-    new_postcode,
-    imd_decile,
-    imd_rank,
-    imd_score
-  ) |>
-  mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided
+## Debugging
+# NHSRpopulation::get_data(tibble_postcodes,
+#   column = "random_postcodes",
+#   url_type = "imd"
+# ) |>
+#   dplyr::select(
+#     random_postcodes,
+#     new_postcode,
+#     imd_decile,
+#     imd_rank,
+#     imd_score
+#   ) |>
+#   mutate(imd_decile_local = ntile(-imd_score, n = 10)) # creating new deciles from the data provided
 ```
 
 ## LSOAs - by postcode and by Local Authority/District
