@@ -1,4 +1,7 @@
 This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Aim
 
@@ -51,3 +54,25 @@ This project has complementary R package projects within NHS-R Community, which 
 [{NHSRpopulation}](https://nhs-r-community.github.io/NHSRpopulation/ "Link to the {NHSRpopulation} package website") - An R package to access the Index of Multiple Deprivation API.
 
 [{NHSRpostcodetools}](https://nhs-r-community.github.io/NHSRpostcodetools/ "Link to {NHSRpostcodetools} package website") - This is a package of useful functions related to working with Postcodes.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/heather-humphreys"><img src="https://avatars.githubusercontent.com/u/154340810?v=4?s=100" width="100px;" alt="heather-humphreys"/><br /><sub><b>heather-humphreys</b></sub></a><br /><a href="#content-heather-humphreys" title="Content">🖋</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
