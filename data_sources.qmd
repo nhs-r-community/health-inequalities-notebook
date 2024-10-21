@@ -27,6 +27,8 @@
 
 ## Code lists
 
+CHD (Congenital Heart Disease) [CHD Codes](https://github.com/nhs-r-community/chd-codes)
+
 Mental Health from Health Foundation's [Network Data Labs](https://github.com/HFAnalyticsLab/Mental-health-code-lists)
 
 Includes code lists for
@@ -47,7 +49,6 @@ A wide range of code lists from [OpenCodelists](https://www.opencodelists.org/).
 
 ## UK addresses
 
-Useful blog detailing some incorrect assumptions on UK addresses and postcodes:
-<https://www.mjt.me.uk/posts/falsehoods-programmers-believe-about-addresses/>
+Useful blog detailing some incorrect assumptions on UK addresses and postcodes: <https://www.mjt.me.uk/posts/falsehoods-programmers-believe-about-addresses/>
 
 UK Address Oddities: <https://paulplowman.com/stuff/uk-address-oddities/>
