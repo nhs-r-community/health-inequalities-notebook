@@ -15,6 +15,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "AlWatson20",
+      "name": "Alastair Watson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108326492?v=4",
+      "profile": "https://github.com/AlWatson20",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
