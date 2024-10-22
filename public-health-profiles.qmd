@@ -4,9 +4,11 @@ Commonly referred to as `Fingertips`, Public Health data can be found through th
 
 This is also available through APIs in R (not through CRAN):
 
-[{fingertipsR}](https://github.com/ropensci/fingertipsR)
+[{fingertipsR}](https://github.com/ropensci/fingertipsR) and [useful cheatsheet](https://rpubs.com/jflowers/274982)
 
-[Static Reports](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/about.html) including life expectancy, best start in life, smoking, obesity, alcohol, cardiovascular disease, respiratory disease, cancer, mulsculoskeletal health, mental health and wellbeing and wider determinants of health.
+Does not go down to LSOA level, only MSOA so cannot be used to find IMD scores.
+
+[Static Reports](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/about.html) including life expectancy, best start in life, smoking, obesity, alcohol, cardiovascular disease, respiratory disease, cancer, musculoskeletal health, mental health and wellbeing and wider determinants of health.
 
 ### R code to install
 
