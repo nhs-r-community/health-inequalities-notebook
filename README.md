@@ -1,6 +1,6 @@
 This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Aim
@@ -70,6 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ThomUK"><img src="https://avatars.githubusercontent.com/u/10871342?v=4?s=100" width="100px;" alt="Tom Smith"/><br /><sub><b>Tom Smith</b></sub></a><br /><a href="#content-ThomUK" title="Content">🖋</a> <a href="https://github.com/nhs-r-community/health-inequalities-notebook/pulls?q=is%3Apr+reviewed-by%3AThomUK" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://chrisbeeley.github.io/chris_beeley_blog/"><img src="https://avatars.githubusercontent.com/u/1259867?v=4?s=100" width="100px;" alt="Chris Beeley"/><br /><sub><b>Chris Beeley</b></sub></a><br /><a href="https://github.com/nhs-r-community/health-inequalities-notebook/issues?q=author%3AChrisBeeley" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://philosopher-analyst.netlify.app/"><img src="https://avatars.githubusercontent.com/u/39963221?v=4?s=100" width="100px;" alt="Zoë Turner"/><br /><sub><b>Zoë Turner</b></sub></a><br /><a href="https://github.com/nhs-r-community/health-inequalities-notebook/pulls?q=is%3Apr+reviewed-by%3ALextuga007" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/nhs-r-community/health-inequalities-notebook/commits?author=Lextuga007" title="Code">💻</a> <a href="#content-Lextuga007" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DCEW"><img src="https://avatars.githubusercontent.com/u/112561799?v=4?s=100" width="100px;" alt="Claire Welsh"/><br /><sub><b>Claire Welsh</b></sub></a><br /><a href="#content-DCEW" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
