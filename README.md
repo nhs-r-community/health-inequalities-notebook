@@ -1,6 +1,6 @@
 This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Aim
@@ -67,6 +67,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/heather-humphreys"><img src="https://avatars.githubusercontent.com/u/154340810?v=4?s=100" width="100px;" alt="heather-humphreys"/><br /><sub><b>heather-humphreys</b></sub></a><br /><a href="#content-heather-humphreys" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AlWatson20"><img src="https://avatars.githubusercontent.com/u/108326492?v=4?s=100" width="100px;" alt="Alastair Watson"/><br /><sub><b>Alastair Watson</b></sub></a><br /><a href="https://github.com/nhs-r-community/health-inequalities-notebook/pulls?q=is%3Apr+reviewed-by%3AAlWatson20" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ThomUK"><img src="https://avatars.githubusercontent.com/u/10871342?v=4?s=100" width="100px;" alt="Tom Smith"/><br /><sub><b>Tom Smith</b></sub></a><br /><a href="#content-ThomUK" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
