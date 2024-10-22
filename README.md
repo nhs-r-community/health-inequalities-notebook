@@ -1,6 +1,6 @@
 This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Aim
@@ -72,6 +72,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://philosopher-analyst.netlify.app/"><img src="https://avatars.githubusercontent.com/u/39963221?v=4?s=100" width="100px;" alt="Zoë Turner"/><br /><sub><b>Zoë Turner</b></sub></a><br /><a href="https://github.com/nhs-r-community/health-inequalities-notebook/pulls?q=is%3Apr+reviewed-by%3ALextuga007" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/nhs-r-community/health-inequalities-notebook/commits?author=Lextuga007" title="Code">💻</a> <a href="#content-Lextuga007" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DCEW"><img src="https://avatars.githubusercontent.com/u/112561799?v=4?s=100" width="100px;" alt="Claire Welsh"/><br /><sub><b>Claire Welsh</b></sub></a><br /><a href="#content-DCEW" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wyuill"><img src="https://avatars.githubusercontent.com/u/10546300?v=4?s=100" width="100px;" alt="wyuill"/><br /><sub><b>wyuill</b></sub></a><br /><a href="#content-wyuill" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.dillingham.me.uk/"><img src="https://avatars.githubusercontent.com/u/477263?v=4?s=100" width="100px;" alt="Iain Dillingham"/><br /><sub><b>Iain Dillingham</b></sub></a><br /><a href="#content-iaindillingham" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

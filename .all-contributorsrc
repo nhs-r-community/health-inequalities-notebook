@@ -72,6 +72,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "iaindillingham",
+      "name": "Iain Dillingham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/477263?v=4",
+      "profile": "https://www.dillingham.me.uk/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
