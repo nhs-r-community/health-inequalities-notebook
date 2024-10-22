@@ -81,6 +81,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "johnmackintosh",
+      "name": "John MacKintosh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3278367?v=4",
+      "profile": "https://johnmackintosh.net/blog",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
