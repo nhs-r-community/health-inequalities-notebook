@@ -17,7 +17,17 @@ Thanks to the NHS-R Community for finding and sharing these links on the NHS-R S
 IMD is very useful for categorising the area a person lives in for deprivation. Deprivation is by country and do not include the other nations. Deciles are the most commonly used way of referring to IMD and are taken from the scores which are ordered and then cut into 10. For deciles the 1 is the most deprived area and 10 is the least deprived.
 
 [Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)\
+
+### England
 [English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)
+[Mapping resources](https://www.gov.uk/guidance/english-indices-of-deprivation-2019-mapping-resources)
+[Live map](http://dclgapps.communities.gov.uk/imd/iod_index.html)
+[The English Indices of Deprivation 2015 – Frequently Asked Questions (FAQs)](https://www.warrington.gov.uk/sites/default/files/2019-09/english-indices-of-deprivation-2015-frequently-asked-questions.pdf)
+
+### Scotland
+[Scotland IMD (SIMD) 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)
+[Public Health Scotland](https://publichealthscotland.scot/services/geography-population-and-deprivation-support/deprivation/scottish-index-of-multiple-deprivation-simd/)
+[Charts and code](https://johnmackintosh.net/tag-deprivation/)
 
 # Finding the IMD for an address
 
