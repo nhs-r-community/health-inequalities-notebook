@@ -1,6 +1,7 @@
 # Public Health Profiles (England and Wales)
 
-Commonly referred to as `Fingertips`, Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/).
+Commonly referred to as `Fingertips`, Public Health data can be found through the [dashboard](https://fingertips.phe.org.uk/) with a comprehensive page of links
+to guidance, features and methods/technical briefings: <https://fingertips.phe.org.uk/profile/guidance/supporting-information/ph-methods>.
 
 This is also available through APIs in R (not through CRAN):
 
