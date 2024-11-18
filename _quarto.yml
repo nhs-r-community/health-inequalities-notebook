@@ -30,6 +30,7 @@ book:
     - peer-groups.qmd
     - public-health-profiles.qmd
     - gender.qmd
+    - england.qmd
     
   repo-url: https://github.com/nhs-r-community/health-inequalities-notebook
   repo-branch: main
