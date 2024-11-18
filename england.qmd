@@ -108,9 +108,9 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average life expectancy for men is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_5, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_5, 1)`** in the most deprived 20%.
+Average life expectancy for men is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_5, 1)`** in the most deprived 20%.
 
-Average life expectancy for women is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_5, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_5, 1)`** in the most deprived 20%.
+Average life expectancy for women is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_5, 1)`** in the most deprived 20%.
 
 ## Inequality in NHS Payments
 
@@ -146,7 +146,7 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average payment per weighted patient is £**`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_5, 2)`** in the most deprived 20% of practices, versus £**`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_1, 2)`** in the least deprived 20%.
+Average payment per weighted patient is **£`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_5, 2)`** in the most deprived 20% of practices, versus **£`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_1, 2)`** in the least deprived 20%.
 
 If there are no dispensing practices in the most deprived quintile, we use the second most deprived. If both are missing, we omit the data point from the figure.
 
@@ -188,7 +188,7 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average fully-qualified GPs FTE per 10,000 weighted patients is **`r round(df_filter[df_filter$Indicator == "TOTAL_GP_EXTGL_FTE", ]$quin_5, 1)`** per weighted patient in the most deprived 20% of practices in `England` versus **`r round(df_filter[df_filter$Indicator == "TOTAL_GP_EXTGL_FTE", ]$quin_1, 1)`** in the least deprived 20%.
+Average fully-qualified GPs FTE per 10,000 weighted patients is **`r round(df_filter[df_filter$Indicator == "TOTAL_GP_EXTGL_FTE", ]$quin_5, 1)`** per weighted patient in the most deprived 20% of practices in England versus **`r round(df_filter[df_filter$Indicator == "TOTAL_GP_EXTGL_FTE", ]$quin_1, 1)`** in the least deprived 20%.
 
 ## Inequality in Health-related Behaviours
 
@@ -232,7 +232,7 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average prevalence of current smokers (15+ years) is **`r round(df_filter[df_filter$Indicator == "Smoking prevalence in adults (15+) - current smokers (QOF)", ]$quin_5*100, 1)`**% in the most deprived 20% of practices in `England` versus \*\*`r round(df_filter[df_filter$Indicator == "Smoking prevalence in adults (15+) - current smokers (QOF)", ]$quin_1*100, 1)`% in the least deprived 20%.
+Average prevalence of current smokers (15+ years) is **`r round(df_filter[df_filter$Indicator == "Smoking prevalence in adults (15+) - current smokers (QOF)", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in England versus **`r round(df_filter[df_filter$Indicator == "Smoking prevalence in adults (15+) - current smokers (QOF)", ]$quin_1*100, 1)`%** in the least deprived 20%.
 
 ## Inequality in Disease Prevalence
 
@@ -298,9 +298,9 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average prevalence of diabetes (17+ years) is **`r round(df_filter[df_filter$Indicator == "Diabetes: QOF prevalence (17+ yrs)", ]$quin_5*100, 1)`% in the most deprived 20% of practices in `England`, versus** `r round(df_filter[df_filter$Indicator == "Diabetes: QOF prevalence (17+ yrs)", ]$quin_1*100, 1)`% in the least deprived 20%.
+Average prevalence of diabetes (17+ years) is **`r round(df_filter[df_filter$Indicator == "Diabetes: QOF prevalence (17+ yrs)", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in England**, versus** **`r round(df_filter[df_filter$Indicator == "Diabetes: QOF prevalence (17+ yrs)", ]$quin_1*100, 1)`%** in the least deprived 20%.
 
-Average prevalence of depression (18+ years) is **`r round(df_filter[df_filter$Indicator == "Depression: QOF prevalence (18+ yrs)", ]$quin_5*100, 1)`**% in the most deprived 20% of practices in `England`, versus **`r round(df_filter[df_filter$Indicator == "Depression: QOF prevalence (18+ yrs)", ]$quin_1*100, 1)`** % in the least deprived 20%.
+Average prevalence of depression (18+ years) is **`r round(df_filter[df_filter$Indicator == "Depression: QOF prevalence (18+ yrs)", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "Depression: QOF prevalence (18+ yrs)", ]$quin_1*100, 1)`** **%** in the least deprived 20%.
 
 ## Inequality in Quality of Service
 
@@ -353,7 +353,7 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average QOF points achieved is **`r round(df_filter[df_filter$Indicator == "% QOF points achieved", ]$quin_5*100, 1)`**% in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "% QOF points achieved", ]$quin_1*100, 1)`**% in the least deprived 20%.
+Average QOF points achieved is **`r round(df_filter[df_filter$Indicator == "% QOF points achieved", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "% QOF points achieved", ]$quin_1*100, 1)`%** in the least deprived 20%.
 
 ## Inequality in Patient Experience
 
@@ -401,9 +401,9 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average % of practices receiving 'Good' or 'Outstanding' CQC ratings is **`r round(df_filter[df_filter$Indicator == "cqc_rating", ]$quin_5*100, 1)`**% in the most deprived 20% of practices in `England`, versus **`r round(df_filter[df_filter$Indicator == "cqc_rating", ]$quin_1*100, 1)`%** in the least deprived 20%.
+Average % of practices receiving 'Good' or 'Outstanding' CQC ratings is **`r round(df_filter[df_filter$Indicator == "cqc_rating", ]$quin_5*100, 1)`**% in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "cqc_rating", ]$quin_1*100, 1)`%** in the least deprived 20%.
 
-Average % of patients describing their experience as 'Good' is **`r round(df_filter[df_filter$Indicator == "overall_pct", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in `England`, versus **`r round(df_filter[df_filter$Indicator == "overall_pct", ]$quin_1*100, 1)`%** in the least deprived 20%.
+Average % of patients describing their experience as 'Good' is **`r round(df_filter[df_filter$Indicator == "overall_pct", ]$quin_5*100, 1)`%** in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "overall_pct", ]$quin_1*100, 1)`%** in the least deprived 20%.
 
 ## Inequality in Appointments
 
@@ -445,7 +445,7 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average number of Face-to-Face appointments per 10,000 weighted patients is **`r round(df_filter[df_filter$Indicator == "Face-to-Face", ]$quin_5, 1)`** in the most deprived 20% of practices in `England`, versus **`r round(df_filter[df_filter$Indicator == "Face-to-Face", ]$quin_1, 1)`** in the least deprived 20%.
+Average number of Face-to-Face appointments per 10,000 weighted patients is **`r round(df_filter[df_filter$Indicator == "Face-to-Face", ]$quin_5, 1)`** in the most deprived 20% of practices in England, versus **`r round(df_filter[df_filter$Indicator == "Face-to-Face", ]$quin_1, 1)`** in the least deprived 20%.
 
 ## Inequality in Impact on Secondary Care
 
