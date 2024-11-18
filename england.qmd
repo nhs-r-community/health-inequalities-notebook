@@ -70,7 +70,9 @@ knitr::opts_chunk$set(
     -   **Population (demand)**: Disease prevalence, Health-related behaviours
     -   **Service quality**: QOF achievement
     -   **Access**: Patient experience, Appointments
-    -   **Impact on secondary care**: Emergency admissions, A&E attendances 
+    -   **Impact on secondary care**: Emergency admissions, A&E attendances
+
+-   This analysis was produced by the [Health Equity Evidence Centre](https://www.heec.co.uk/). Additional data and analysis is available on [GitHub](https://github.com/HealthEquityEvidenceCentre/HEEC).
 
 -   For further information or to discuss the results, please contact [Dr John Ford](j.a.ford@qmul.ac.uk) or [Mr Cameron Appel](c.appel@qmul.ac.uk).
 
