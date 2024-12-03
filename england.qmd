@@ -6,37 +6,24 @@ title: "Structural inequalities in General Practice in England"
 # Load necessary libraries
 library(ggplot2)
 library(showtext)
-library(patchwork)
-library(ggtext)
-library(fingertipsR)
 library(tidyverse)
-library(purrr)
-library(tibble)
-library(spatstat)
-library(lubridate)
-library(readODS)
-library(janitor)
-library(gdata)
 library(magrittr)
 
-"%ni%" <- Negate("%in%")
-
 # Set up Google font and automatic display for text rendering
-font_add_google("Poppins", family = "Poppins")
 showtext_auto()
 
 # Set up the ggplot theme
 theme_set(
   theme_minimal() +
     theme(
-      axis.title = element_text(size = 80, family = "Poppins"),
-      axis.text = element_text(size = 80, family = "Poppins"),
-      plot.caption = element_text(size = 60, family = "Poppins"),
-      plot.title = element_text(size = 100, family = "Poppins"),
-      plot.subtitle = element_text(size = 90, family = "Poppins"),
+      axis.title = element_text(size = 80),
+      axis.text = element_text(size = 80),
+      plot.caption = element_text(size = 60),
+      plot.title = element_text(size = 100),
+      plot.subtitle = element_text(size = 90),
       panel.grid = element_line(size = 5),
-      legend.title = element_text(size = 60, family = "Poppins"),
-      legend.text = element_text(size = 60, family = "Poppins"),
+      legend.title = element_text(size = 60),
+      legend.text = element_text(size = 60),
       legend.key.width = unit(3.5, "cm"),
       plot.title.position = "plot"
     )
@@ -74,7 +61,7 @@ knitr::opts_chunk$set(
 
 -   This analysis was produced by the [Health Equity Evidence Centre](https://www.heec.co.uk/). Additional data and analysis is available on [GitHub](https://github.com/HealthEquityEvidenceCentre/HEEC).
 
--   For further information or to discuss the results, please contact [Dr John Ford](j.a.ford@qmul.ac.uk) or [Mr Cameron Appel](c.appel@qmul.ac.uk).
+-   For further information or to discuss the results, please contact [Dr John Ford](mailto:j.a.ford@qmul.ac.uk) or [Mr Cameron Appel](mailto:c.appel@qmul.ac.uk).
 
 ## Inequality in Life Expectancy
 
@@ -96,7 +83,7 @@ df_filter %>%
     "Life_Expectancy_Female" = "Female",
     "Life_Expectancy_Male" = "Male"
   )) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Life expectancy by practice, birth cohort 2016-20 (England)"),
@@ -134,7 +121,7 @@ df_filter %>%
     "payment_per_patient_disp" = "Dispensing practices",
     "payment_per_patient_non_disp" = "Non-dispensing practices"
   )) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Mean payment per weighted patient, 2022/23 (England)"),
@@ -176,7 +163,7 @@ df_filter %>%
     "TOTAL_DPC_FTE" = "Direct patient care",
     "PCN_staff" = "PCN-funded staff (all types)"
   )) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Average staff FTE per 10,000 weighted patients, 2023/24 (England)"),
@@ -220,7 +207,7 @@ df_filter %>%
     labels = scales::percent,
     limits = c(0, 0.25)
   ) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Average prevalence of health-related behaviours, ", year, " (England)"),
@@ -276,7 +263,7 @@ df_filter %>%
   scale_y_continuous(
     labels = scales::percent
   ) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Average disease prevalence, ", year, " (England)"),
@@ -341,7 +328,7 @@ df_filter %>%
   scale_y_continuous(
     labels = scales::percent
   ) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Average % achievement of QOF domains, 2023/24", " (England)"),
@@ -389,7 +376,7 @@ df_filter %>%
   scale_y_continuous(
     labels = scales::percent
   ) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Average patient experience, 2023/24 (England)"),
@@ -423,7 +410,7 @@ df_filter %>%
   geom_point(aes(y = quin_1, color = "Least deprived")) +
   geom_point(aes(y = quin_5, color = "Most deprived")) +
   geom_point(aes(y = avg, color = "National average"), size = 15, shape = 18) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Median appointments and DNAs per 10,000 weighted patients, March 2024 (England)"),
@@ -473,7 +460,7 @@ df_filter %>%
     "Emergency admissions (0 to 4 years) - CCG" = "Emergency admissions (0-4 yrs)",
     "A&E attendances (0 to 4 years)" = "A&E attendances (0-4 yrs)"
   )) +
-  scale_color_manual(values = c("Least deprived" = "#28B788", "Most deprived" = "#007AA8", "National average" = "#A80026")) +
+  scale_color_manual(values = c("Least deprived" = "#009639", "Most deprived" = "#003087", "National average" = "#DA291C")) +
   labs(
     x = NULL, y = NULL,
     title = paste0("Median emergency admissions or A&E attendances, latest period (England)"),
