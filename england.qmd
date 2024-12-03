@@ -1,5 +1,6 @@
 ---
 title: "Structural inequalities in General Practice in England"
+brand: _brand.yml
 ---
 
 ```{r setup, include=FALSE}
