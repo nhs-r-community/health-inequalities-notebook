@@ -13,8 +13,6 @@ execute:
 ```{r}
 #| label: setup
 #| warning: false
-#| echo: true
-#| code-fold: true
 #| code-summary: "Show the set up code"
 
 # Load necessary libraries
@@ -186,7 +184,7 @@ Average fully-qualified GPs FTE per 10,000 weighted patients is **`r round(df_fi
 
 ## Inequality in Health-related Behaviours
 
-```{r behaviours, echo = F, warning = F}
+```{r behaviours}
 #| fig-alt: "Dumbell chart with average prevalence of health related behaviours for 2024 for England GP Practices. Split by current smokers (over 15), obesity (over 18) and hypertension (all ages). The widest gap is for smokers, followed by obesity then hypertension which is the only one where least deprived is lower on the % scale."
 
 year <- 2024
@@ -232,7 +230,7 @@ Average prevalence of current smokers (15+ years) is **`r round(df_filter[df_fil
 
 ## Inequality in Disease Prevalence
 
-```{r prevalence, echo = F, warning = F}
+```{r prevalence}
 #| fig-alt: "Dumbell chart with average disease prevalence for 2023 for England GP Practices. Split by 13 health categories. The highest and also has the widest gap for deprivation is depression (over 18 years), followed by diabetes (over 17 years)"
 year <- 2023
 
@@ -301,11 +299,11 @@ Average prevalence of depression (18+ years) is **`r round(df_filter[df_filter$I
 
 ## Inequality in Quality of Service
 
-```{r quality, echo = F, warning = F}
-df_filter <- df %>%
-  filter(ICB.NAME == "England") %>%
+```{r quality}
 #| fig-alt: "Dumbell chart with average percentage prevalence of qof domains for 2023/24 for England GP Practices. Split by 6 categories the highes percentage is for qof points achieved followed by percentage of children 5 years received DTaP/IPV and 2 MMR which also has a considerable deprivation gap. "
 
+df_filter <- df %>%
+  filter(ICB.NAME == "England") %>%
   filter(Year == 2023 & Indicator %in% c(
     "Last BP reading of patients (<80 yrs, with hypertension), in the last 12 months is <= 140/90 mmHg (denominator incl. PCAs)",
     "IFCC-HbA1c <= 58 mmol/mol in patients with diabetes without frailty (denominator incl. PCAs)"
@@ -356,10 +354,11 @@ Average QOF points achieved is **`r round(df_filter[df_filter$Indicator == "% QO
 
 ## Inequality in Patient Experience
 
-```{r exp, echo = F, warning = F}
+```{r exp}
+#| fig-alt: "Dumbell chart with average patient experience for 2023/24 for England GP Practices. Split by 5 categories of experience the lowest percentage is for continuity of care."
+
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
-#| fig-alt: "Dumbell chart with average patient experience for 2023/24 for England GP Practices. Split by 5 categories of experience the lowest percentage is for continuity of care."
   filter(
     Year == 2024 & Indicator %in% c(
       "access_pct",
@@ -407,7 +406,7 @@ Average % of patients describing their experience as 'Good' is **`r round(df_fil
 
 ## Inequality in Appointments
 
-```{r appts, echo = F, warning = F}
+```{r appts}
 #| fig-alt: "Dumbell chart with median appointments and did not attends per 10,000 weighted patients for March 2024 for England GP Practices. Split by telephone, face to face and didn't attend the highest numbers are for face to face with lowest for DNA. Most deprived had the lowest number except for DNA which was almost the same as least deprived."
 year <- 2024
 
@@ -450,10 +449,11 @@ Average number of Face-to-Face appointments per 10,000 weighted patients is **`r
 
 ## Inequality in Impact on Secondary Care
 
-```{r secondary, echo = F, warning = F}
+```{r secondary}
+#| fig-alt: "Dumbell chart with median emergency admissions or A&E attendances for the latest period in England GP Practices. Split by number of emergency admissions with cancer (from 2021), emergency admissions for ages 0-4 years (from 2022) and A&E attendances for 0-4 years (for 2023)the widest gap and highest numbers are for A&E attendances for children. "
+
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
-#| fig-alt: "Dumbell chart with median emergency admissions or A&E attendances for the latest period in England GP Practices. Split by number of emergency admissions with cancer (from 2021), emergency admissions for ages 0-4 years (from 2022) and A&E attendances for 0-4 years (for 2023)the widest gap and highest numbers are for A&E attendances for children. "
   filter(Year == 2021 & Indicator %in% c(
     "Emergency admissions (0 to 4 years) - CCG"
   ) |
