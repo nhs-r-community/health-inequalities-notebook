@@ -5,12 +5,8 @@ title: "Structural inequalities in General Practice in England"
 ```{r setup, include=FALSE}
 # Load necessary libraries
 library(ggplot2)
-library(showtext)
 library(tidyverse)
 library(magrittr)
-
-# Set up Google font and automatic display for text rendering
-showtext_auto()
 
 # Set up the ggplot theme
 theme_set(
