@@ -92,9 +92,9 @@ df_filter %>%
   guides(colour = guide_legend(override.aes = list(size = 50, shape = c(16, 16, 18))))
 ```
 
-Average life expectancy for men is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_5, 1)`** in the most deprived 20%.
+Average life expectancy for males is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Male", ]$quin_5, 1)`** in the most deprived 20%.
 
-Average life expectancy for women is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_5, 1)`** in the most deprived 20%.
+Average life expectancy for females is **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_1, 1)`** in the least deprived 20% and **`r round(df_filter[df_filter$Indicator == "Life_Expectancy_Female", ]$quin_5, 1)`** in the most deprived 20%.
 
 ## Inequality in NHS Payments
 
