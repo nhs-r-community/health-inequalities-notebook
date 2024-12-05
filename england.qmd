@@ -1,5 +1,13 @@
 ---
 title: "Structural inequalities in General Practice in England"
+format:
+  html:
+    code-fold: true
+    code-summary: "Click to show code"
+    fig-width: 90
+    fig-height: 25
+execute: 
+  echo: true
 ---
 
 ```{r setup, include=FALSE}
@@ -32,13 +40,6 @@ df[is.na(df$quin_4) & is.na(df$quin_5), ]
 df %<>%
   mutate(quin_5 = ifelse(is.na(quin_5), quin_4, quin_5))
 
-knitr::opts_chunk$set(
-  echo = FALSE,
-  warning = FALSE,
-  fig.width = 90,
-  fig.height = 25,
-  fig.fullwidth = TRUE
-)
 ```
 
 ## Introduction
