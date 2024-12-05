@@ -39,6 +39,6 @@ book:
 format:
   html:
     theme: cosmo
-
+brand: _brand.yml
 editor: visual
 
