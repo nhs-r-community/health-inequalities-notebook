@@ -10,7 +10,13 @@ execute:
   echo: true
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label: setup
+#| warning: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show the set up code"
+
 # Load necessary libraries
 library(ggplot2)
 library(tidyverse)
@@ -35,9 +41,7 @@ theme_set(
 
 update_geom_defaults("point", list(size = 50))
 
-df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEEC/refs/heads/main/datapacks/final_data.csv")
-df[is.na(df$quin_4) & is.na(df$quin_5), ]
-df %<>%
+df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEEC/refs/heads/main/datapacks/final_data.csv") |> 
   mutate(quin_5 = ifelse(is.na(quin_5), quin_4, quin_5))
 
 ```
