@@ -36,9 +36,6 @@ book:
   repo-branch: main
   repo-actions: [edit, issue]
 
-format:
-  html:
-    theme: cosmo
 brand: _brand.yml
 editor: visual
 
