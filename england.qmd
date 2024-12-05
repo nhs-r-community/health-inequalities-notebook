@@ -47,7 +47,7 @@ knitr::opts_chunk$set(
 
 -   A key role of commissioners is to ensure the equitable distribution of resources across the system.
 
--   We present the latest NHS primary care data, using Index of Multiple Deprivation (IMD) to examine inequalities existing in primary care access, experience and outcomes, across the following categories:
+-   We present the latest NHS primary care data, using [Index of Multiple Deprivation (IMD)](#imd) to examine inequalities existing in primary care access, experience and outcomes, across the following categories:
 
     -   **Resources (supply)**: Payments, Workforce
     -   **Population (demand)**: Disease prevalence, Health-related behaviours
