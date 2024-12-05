@@ -65,7 +65,7 @@ df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEE
 ## Inequality in Life Expectancy
 
 ```{r Life_Expectancy}
-#| fig-alt: "Dumbell chart with average life expectancy for England GP Practices. Split by female and male."
+#| fig-alt: "Dumbbell chart with average life expectancy for England GP Practices. Split by female and male."
 
 year <- 2019
 
@@ -103,7 +103,7 @@ Average life expectancy for females is **`r round(df_filter[df_filter$Indicator 
 ## Inequality in NHS Payments
 
 ```{r payments}
-#| fig-alt: "Dumbell chart with mean payment per weighted patient 2022/23 for England GP Practices. Split by All practices, Non-dispensing practice and Dispensing practices. Non dispensing practices are the closes between least and most deprived whilst Dispensing practices is a higher cost overall."
+#| fig-alt: "Dumbbell chart with mean payment per weighted patient 2022/23 for England GP Practices. Split by All practices, Non-dispensing practice and Dispensing practices. Non dispensing practices are the closes between least and most deprived whilst Dispensing practices is a higher cost overall."
 
 year <- 2023
 
@@ -143,7 +143,7 @@ If there are no dispensing practices in the most deprived quintile, we use the s
 ## Inequality in Workforce
 
 ```{r workforce}
-#| fig-alt: "Dumbell chart with average full time equivalent stff per 10,000 per weighted patients 2023/24 for England GP Practices. Split by 6 categories of healthcare staff the highest number of staff are for admin/non-clinical whilst lowest is PCN-funded staff (all types). The only categories where there is some gap between deprivation is for fully qualiffied permanent GPs and direct patient care."
+#| fig-alt: "Dumbbell chart with average full time equivalent stff per 10,000 per weighted patients 2023/24 for England GP Practices. Split by 6 categories of healthcare staff the highest number of staff are for admin/non-clinical whilst lowest is PCN-funded staff (all types). The only categories where there is some gap between deprivation is for fully qualiffied permanent GPs and direct patient care."
 
 year <- 2024
 
@@ -185,7 +185,7 @@ Average fully-qualified GPs FTE per 10,000 weighted patients is **`r round(df_fi
 ## Inequality in Health-related Behaviours
 
 ```{r behaviours}
-#| fig-alt: "Dumbell chart with average prevalence of health related behaviours for 2024 for England GP Practices. Split by current smokers (over 15), obesity (over 18) and hypertension (all ages). The widest gap is for smokers, followed by obesity then hypertension which is the only one where least deprived is lower on the % scale."
+#| fig-alt: "Dumbbell chart with average prevalence of health related behaviours for 2024 for England GP Practices. Split by current smokers (over 15), obesity (over 18) and hypertension (all ages). The widest gap is for smokers, followed by obesity then hypertension which is the only one where least deprived is lower on the % scale."
 
 year <- 2024
 
@@ -231,7 +231,7 @@ Average prevalence of current smokers (15+ years) is **`r round(df_filter[df_fil
 ## Inequality in Disease Prevalence
 
 ```{r prevalence}
-#| fig-alt: "Dumbell chart with average disease prevalence for 2023 for England GP Practices. Split by 13 health categories. The highest and also has the widest gap for deprivation is depression (over 18 years), followed by diabetes (over 17 years)"
+#| fig-alt: "Dumbbell chart with average disease prevalence for 2023 for England GP Practices. Split by 13 health categories. The highest and also has the widest gap for deprivation is depression (over 18 years), followed by diabetes (over 17 years)"
 year <- 2023
 
 df_filter <- df %>%
@@ -300,7 +300,7 @@ Average prevalence of depression (18+ years) is **`r round(df_filter[df_filter$I
 ## Inequality in Quality of Service
 
 ```{r quality}
-#| fig-alt: "Dumbell chart with average percentage prevalence of qof domains for 2023/24 for England GP Practices. Split by 6 categories the highes percentage is for qof points achieved followed by percentage of children 5 years received DTaP/IPV and 2 MMR which also has a considerable deprivation gap. "
+#| fig-alt: "Dumbbell chart with average percentage prevalence of qof domains for 2023/24 for England GP Practices. Split by 6 categories the highes percentage is for qof points achieved followed by percentage of children 5 years received DTaP/IPV and 2 MMR which also has a considerable deprivation gap. "
 
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
@@ -355,7 +355,7 @@ Average QOF points achieved is **`r round(df_filter[df_filter$Indicator == "% QO
 ## Inequality in Patient Experience
 
 ```{r exp}
-#| fig-alt: "Dumbell chart with average patient experience for 2023/24 for England GP Practices. Split by 5 categories of experience the lowest percentage is for continuity of care."
+#| fig-alt: "Dumbbell chart with average patient experience for 2023/24 for England GP Practices. Split by 5 categories of experience the lowest percentage is for continuity of care."
 
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
@@ -407,7 +407,7 @@ Average % of patients describing their experience as 'Good' is **`r round(df_fil
 ## Inequality in Appointments
 
 ```{r appts}
-#| fig-alt: "Dumbell chart with median appointments and did not attends per 10,000 weighted patients for March 2024 for England GP Practices. Split by telephone, face to face and didn't attend the highest numbers are for face to face with lowest for DNA. Most deprived had the lowest number except for DNA which was almost the same as least deprived."
+#| fig-alt: "Dumbbell chart with median appointments and did not attends per 10,000 weighted patients for March 2024 for England GP Practices. Split by telephone, face to face and didn't attend the highest numbers are for face to face with lowest for DNA. Most deprived had the lowest number except for DNA which was almost the same as least deprived."
 year <- 2024
 
 df_filter <- df %>%
@@ -450,7 +450,7 @@ Average number of Face-to-Face appointments per 10,000 weighted patients is **`r
 ## Inequality in Impact on Secondary Care
 
 ```{r secondary}
-#| fig-alt: "Dumbell chart with median emergency admissions or A&E attendances for the latest period in England GP Practices. Split by number of emergency admissions with cancer (from 2021), emergency admissions for ages 0-4 years (from 2022) and A&E attendances for 0-4 years (for 2023)the widest gap and highest numbers are for A&E attendances for children. "
+#| fig-alt: "Dumbbell chart with median emergency admissions or A&E attendances for the latest period in England GP Practices. Split by number of emergency admissions with cancer (from 2021), emergency admissions for ages 0-4 years (from 2022) and A&E attendances for 0-4 years (for 2023)the widest gap and highest numbers are for A&E attendances for children. "
 
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
