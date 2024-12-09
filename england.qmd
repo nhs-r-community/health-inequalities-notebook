@@ -25,14 +25,14 @@ library(magrittr)
 theme_set(
   theme_minimal() +
     theme(
-      axis.title = element_text(size = 80),
-      axis.text = element_text(size = 80),
-      plot.caption = element_text(size = 60),
-      plot.title = element_text(size = 100),
-      plot.subtitle = element_text(size = 90),
+      axis.title = element_text(size = 100),
+      axis.text = element_text(size = 100),
+      plot.caption = element_text(size = 80),
+      plot.title = element_text(size = 120),
+      plot.subtitle = element_text(size = 110),
       panel.grid = element_line(size = 5),
-      legend.title = element_text(size = 60),
-      legend.text = element_text(size = 60),
+      legend.title = element_text(size = 80),
+      legend.text = element_text(size = 80),
       legend.key.width = unit(3.5, "cm"),
       plot.title.position = "plot"
     )
