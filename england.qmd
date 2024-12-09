@@ -40,8 +40,7 @@ theme_set(
 
 update_geom_defaults("point", list(size = 50))
 
-df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEEC/refs/heads/main/datapacks/final_data.csv") |> 
-  mutate(quin_5 = ifelse(is.na(quin_5), quin_4, quin_5))
+df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEEC/refs/heads/main/datapacks/final_data.csv")
 
 ```
 
@@ -89,7 +88,7 @@ df_filter %>%
   labs(
     x = NULL, y = NULL,
     title = paste0("Life expectancy by practice, birth cohort 2016-20 (England)"),
-    subtitle = "Practices in most and least deprived IMD quintiles. Larger circles represent stronger socio-economic gradient.",
+    subtitle = "Practices in most and least deprived IMD quintiles.",
     colour = "",
     caption = "Source: NHS England GP Workforce statistics, 2024. © Health Equity Evidence Centre, 2024."
   ) +
@@ -138,8 +137,6 @@ df_filter %>%
 ```
 
 Average payment per weighted patient is **£`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_5, 2)`** in the most deprived 20% of practices, versus **£`r round(df_filter[df_filter$Indicator == "payment_per_patient_all", ]$quin_1, 2)`** in the least deprived 20%.
-
-If there are no dispensing practices in the most deprived quintile, we use the second most deprived. If both are missing, we omit the data point from the figure.
 
 ## Inequality in Workforce
 
@@ -502,6 +499,4 @@ Average number of emergency admissions (0-4 years) is **`r round(df_filter[df_fi
 
 ## Acknowledgements
 
--   The work of the Health Equity Evidence Centre is made possible through seed funding from NHS East of England team.
-
--   The views expressed in this publication are those of the Health Equity Evidence Centre and not necessarily those of NHS England.
+-   This work was contributed by the Health Equity Evidence Centre, and made possible through seed funding from NHS East of England team.
