@@ -67,7 +67,7 @@ df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEE
 ```{r Life_Expectancy}
 #| fig-alt: "Dumbbell chart with average life expectancy for England GP Practices. Split by female and male."
 
-year <- 2019
+year <- 2020
 
 df_filter <- df %>%
   filter(ICB.NAME == "England") %>%
