@@ -42,6 +42,17 @@ update_geom_defaults("point", list(size = 50))
 
 df <- read.csv("https://raw.githubusercontent.com/HealthEquityEvidenceCentre/HEEC/refs/heads/main/datapacks/final_data.csv")
 
+# The following code is used for data at ICB level
+# If there were no practices in the most deprived quintile in the ICB, this line will still create a datapoint representing the most deprived practices in that ICB (is not required for country level data)
+# df[is.na(df$quin_4) & is.na(df$quin_5), ]
+#
+# If quin_5 is NA (missing), code assigns the value from quin_4 to quin_5. 
+# If quin_5 is not NA, it retains its value
+# (Not required for country level data)
+# Note the use of the [magrittr pipe %<>%](https://magrittr.tidyverse.org/reference/compound.html?q=%%3C%3E%#ref-usage)
+# df %<>%
+#   mutate(quin_5 = ifelse(is.na(quin_5), quin_4, quin_5))
+
 ```
 
 ## Introduction
