@@ -1,6 +1,6 @@
 This project is a collection of information and knowledge related to analytical work on "Health Inequalities", as performed in the NHS and the wider UK Health and Social Care sector.
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Aim
@@ -76,6 +76,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.dillingham.me.uk/"><img src="https://avatars.githubusercontent.com/u/477263?v=4?s=100" width="100px;" alt="Iain Dillingham"/><br /><sub><b>Iain Dillingham</b></sub></a><br /><a href="#content-iaindillingham" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://johnmackintosh.net/blog"><img src="https://avatars.githubusercontent.com/u/3278367?v=4?s=100" width="100px;" alt="John MacKintosh"/><br /><sub><b>John MacKintosh</b></sub></a><br /><a href="#content-johnmackintosh" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.appel.co.uk"><img src="https://avatars.githubusercontent.com/u/16980052?v=4?s=100" width="100px;" alt="Cam Appel"/><br /><sub><b>Cam Appel</b></sub></a><br /><a href="#content-camappel" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
