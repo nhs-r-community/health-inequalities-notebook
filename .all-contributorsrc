@@ -90,6 +90,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "camappel",
+      "name": "Cam Appel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16980052?v=4",
+      "profile": "http://www.appel.co.uk",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
