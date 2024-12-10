@@ -279,12 +279,10 @@ df_filter %>%
   ) +
   theme(
     plot.title = element_text(
-      size = 105,
-      family = "Poppins"
+      size = 105
     ),
     plot.subtitle = element_text(
-      size = 90,
-      family = "Poppins"
+      size = 90
     )
   ) +
   coord_flip() +
@@ -431,12 +429,10 @@ df_filter %>%
   ) +
   theme(
     plot.title = element_text(
-      size = 105,
-      family = "Poppins"
+      size = 105
     ),
     plot.subtitle = element_text(
-      size = 95,
-      family = "Poppins"
+      size = 95
     )
   ) +
   coord_flip() +
@@ -483,12 +479,10 @@ df_filter %>%
   ) +
   theme(
     plot.title = element_text(
-      size = 105,
-      family = "Poppins"
+      size = 105
     ),
     plot.subtitle = element_text(
-      size = 95,
-      family = "Poppins"
+      size = 95
     )
   ) +
   coord_flip() +
