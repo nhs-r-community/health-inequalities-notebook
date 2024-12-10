@@ -76,7 +76,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.dillingham.me.uk/"><img src="https://avatars.githubusercontent.com/u/477263?v=4?s=100" width="100px;" alt="Iain Dillingham"/><br /><sub><b>Iain Dillingham</b></sub></a><br /><a href="#content-iaindillingham" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://johnmackintosh.net/blog"><img src="https://avatars.githubusercontent.com/u/3278367?v=4?s=100" width="100px;" alt="John MacKintosh"/><br /><sub><b>John MacKintosh</b></sub></a><br /><a href="#content-johnmackintosh" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.appel.co.uk"><img src="https://avatars.githubusercontent.com/u/16980052?v=4?s=100" width="100px;" alt="Cam Appel"/><br /><sub><b>Cam Appel</b></sub></a><br /><a href="#content-camappel" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.appel.co.uk"><img src="https://avatars.githubusercontent.com/u/16980052?v=4?s=100" width="100px;" alt="Cam Appel"/><br /><sub><b>Cam Appel</b></sub></a><br /><a href="#content-camappel" title="Content">🖋</a> <a href="https://github.com/nhs-r-community/health-inequalities-notebook/commits?author=camappel" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
