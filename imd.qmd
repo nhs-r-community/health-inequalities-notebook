@@ -5,7 +5,7 @@ title: "Index of Multiple Deprivation (IMD)"
 The latest available IMD data for England is from 2019.
 
 ::: {.callout-important collapse="false" appearance="default" icon="true"}
-## Updated IMD for England
+## Updated IMD for England {#imd}
 
 This is expected to be released in late 2025 by [Oxford Consultants for Social Inclusion (OCSI)](https://ocsi.uk/2023/07/10/we-are-updating-the-english-indices-of-deprivation/).
 
@@ -19,15 +19,17 @@ IMD is very useful for categorising the area a person lives in for deprivation. 
 [Wikipedia link](https://en.wikipedia.org/wiki/Multiple_deprivation_index)\
 
 ### England
-- [English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)  
-- [Mapping resources](https://www.gov.uk/guidance/english-indices-of-deprivation-2019-mapping-resources)  
-- [Live map](http://dclgapps.communities.gov.uk/imd/iod_index.html)  
-- [The English Indices of Deprivation 2015 – Frequently Asked Questions (FAQs)](https://www.warrington.gov.uk/sites/default/files/2019-09/english-indices-of-deprivation-2015-frequently-asked-questions.pdf)
+
+-   [English IMD 2015 - Guidance](https://assets.publishing.service.gov.uk/media/5a7f0e5ded915d74e33f410b/English_Index_of_Multiple_Deprivation_2015_-_Guidance.pdf)\
+-   [Mapping resources](https://www.gov.uk/guidance/english-indices-of-deprivation-2019-mapping-resources)\
+-   [Live map](http://dclgapps.communities.gov.uk/imd/iod_index.html)\
+-   [The English Indices of Deprivation 2015 – Frequently Asked Questions (FAQs)](https://www.warrington.gov.uk/sites/default/files/2019-09/english-indices-of-deprivation-2015-frequently-asked-questions.pdf)
 
 ### Scotland
-- [Scotland IMD (SIMD) 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)  
-- [Public Health Scotland](https://publichealthscotland.scot/services/geography-population-and-deprivation-support/deprivation/scottish-index-of-multiple-deprivation-simd/)  
-- [Charts and code](https://johnmackintosh.net/tag-deprivation/)
+
+-   [Scotland IMD (SIMD) 2020](https://www.gov.scot/collections/scottish-index-of-multiple-deprivation-2020/)\
+-   [Public Health Scotland](https://publichealthscotland.scot/services/geography-population-and-deprivation-support/deprivation/scottish-index-of-multiple-deprivation-simd/)\
+-   [Charts and code](https://johnmackintosh.net/tag-deprivation/)
 
 # Finding the IMD for an address
 
